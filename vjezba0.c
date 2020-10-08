@@ -40,14 +40,30 @@ char* mystrcat(char str1[],char str2[]) {
     return str1;
 }
 
+char* reverse (char source[],char dest[]){
+    int i=mystrlen(source)-1;
+    int j=0;
+    dest[i+1]='\0';
+    while (i >= 0){
+        dest[j]=source[i];
+        i--;
+        j++;
+    }
+    dest[j+1]='\0';
+    return dest;
+}
+
 int main (){
-    char string[] = "ABC";
+    char string[] = "ABCDE";
     char string2[] = "ABCDP";
     char test[] = "TEST";
+    char testReverse[] = "TESTREVERSE";
     printf ("Duljina stringa je %d\n", mystrlen(string));
     printf ("Duljina stringa je %d\n", mystrlen(string2));
-    printf ("ISSKOPIRAN string je %s\n", mystrcpy(test,string2));
-    printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));
-    printf("strcat string je %s\n", mystrcat(string, string2));
+    // printf ("ISSKOPIRAN string je %s\n", mystrcpy(test,string2));
+    // printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  //ODKOMENTIRAJTE 1 po 1
+    // printf("strcat string je %s\n", mystrcat(string, string2));
+    // printf ("reverse string je %s\n", reverse(string,testReverse));
+
     return 0;
 }
