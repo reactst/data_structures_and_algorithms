@@ -30,7 +30,6 @@ int mystrcmp (char str1[],char str2[]){
     if (len1==len2)
     return 0;
 }
-
 char* mystrcat(char str1[],char str2[]) {
     int len2 = mystrlen(str2);
     int len1 = mystrlen(str1);
