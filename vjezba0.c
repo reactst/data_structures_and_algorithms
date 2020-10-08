@@ -48,6 +48,6 @@ int main (){
     printf ("Duljina stringa je %d\n", mystrlen(string2));
     printf ("ISSKOPIRAN string je %s\n", mystrcpy(test,string2));
     printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));
-    printf("strCat string je %s\n", mystrcat(string, string2));
+    printf("strcat string je %s\n", mystrcat(string, string2));
     return 0;
 }
