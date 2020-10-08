@@ -1,3 +1,5 @@
+#include <stdio.h>
+#include <string.h>
 int mystrlen (char unos[]) {
     int lenght=0;
     for (int i=0;unos[i]!='\0';i++){
@@ -5,8 +7,8 @@ int mystrlen (char unos[]) {
     }
     return lenght;
 }
-//test push
-char * mystrcpy (char source[],char dest[]){
+
+char* mystrcpy (char source[],char dest[]){
     int i=0;
     while (dest[i]!='\0'){
         source[i]=dest[i];
@@ -16,6 +18,7 @@ char * mystrcpy (char source[],char dest[]){
     dest[i]='\0';
     return dest;
 }
+
 int mystrcmp (char str1[],char str2[]){
     int len1=mystrlen(str1);
     int len2=mystrlen(str2);
@@ -31,6 +34,7 @@ int mystrcmp (char str1[],char str2[]){
     if (len1==len2)
     return 0;
 }
+
 char* mystrcat(char str1[],char str2[]) {
     int len2 = mystrlen(str2);
     int len1 = mystrlen(str1);
@@ -53,17 +57,29 @@ char* reverse (char source[],char dest[]){
     return dest;
 }
 
-int main (){
+char* mystrstr (char source[],char dest[]){
+    int len1 = mystrlen(source);
+    int len2 = mystrlen(dest);
+    int i=0;
+    while (source[i]!='\0'){
+        for (int j=0; j<len2; j++){
+            
+        }
+
+    }
+}
+
+
+void main (){
     char string[] = "ABCDE";
     char string2[] = "ABCDP";
-    char test[] = "TEST";
+    char test[] = "REVERSE";
     char testReverse[] = "TESTREVERSE";
     printf ("Duljina stringa je %d\n", mystrlen(string));
     printf ("Duljina stringa je %d\n", mystrlen(string2));
-    // printf ("ISSKOPIRAN string je %s\n", mystrcpy(test,string2));
-    // printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  //ODKOMENTIRAJTE 1 po 1
-    // printf("strcat string je %s\n", mystrcat(string, string2));
-    // printf ("reverse string je %s\n", reverse(string,testReverse));
-
-    return 0;
+    // printf ("ISSKOPIRAN string je %s\n", mystrcpy(test,string2));    //MIJENJA (test)string
+    // printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  
+    // printf("strcat string je %s\n", mystrcat(string, string2));             //MIJENJA string
+    // printf ("reverse string je %s\n", reverse(string,testReverse));         //MIJENJA testReverse
+    printf ("mystrstr: %s\n",mystrstr(test,testReverse));
 }
