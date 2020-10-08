@@ -5,6 +5,7 @@ int mystrlen (char unos[]) {
     }
     return lenght;
 }
+//test push
 char * mystrcpy (char source[],char dest[]){
     int i=0;
     while (dest[i]!='\0'){
