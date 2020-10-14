@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <string.h>
 int mystrlen (char unos[]) {
     int lenght=0;
     for (int i=0;unos[i]!='\0';i++){
@@ -56,16 +55,24 @@ char* reverse (char source[],char dest[]){
     dest[j+1]='\0';
     return dest;
 }
-
-char* mystrstr (char source[],char dest[]){
-    int len1 = mystrlen(source);
-    int len2 = mystrlen(dest);
-    int i=0;
-    while (source[i]!='\0'){
-        for (int j=0; j<len2; j++){
-            
+char* mystrstr(char* string1[],char* string2[]){
+    int test;
+    int len1=mystrlen(string1);
+    int len2=mystrlen(string2);
+    for(int i=0;i<=len1-len2;i++) {
+        test=1;
+        for(int j=0; j<len2; j++)  {
+            if(string1[i+j]!=string2[j]) {
+                test=0;
+                break;
+            }
         }
-
+        if(test==1){
+           return &(string2[len1+15]);
+        }
+    }
+     if(test=0){
+        return NULL;
     }
 }
 
@@ -73,12 +80,12 @@ char* mystrstr (char source[],char dest[]){
 void main (){
     char string[] = "ABCDE";
     char string2[] = "ABCDP";
-    char test[] = "REVERSE";
+    char test[] = "TESTREVERSE";
     char testReverse[] = "TESTREVERSE";
     printf ("Duljina stringa je %d\n", mystrlen(string));
     printf ("Duljina stringa je %d\n", mystrlen(string2));
-    // printf ("ISSKOPIRAN string je %s\n", mystrcpy(test,string2));    //MIJENJA (test)string
-    // printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  
+    // printf ("ISKOPIRAN string je %s\n", mystrcpy(test,string2));    //MIJENJA (test)string
+    printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  
     // printf("strcat string je %s\n", mystrcat(string, string2));             //MIJENJA string
     // printf ("reverse string je %s\n", reverse(string,testReverse));         //MIJENJA testReverse
     printf ("mystrstr: %s\n",mystrstr(test,testReverse));
