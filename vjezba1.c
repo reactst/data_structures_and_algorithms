@@ -10,7 +10,8 @@ int* podniz (int* niz, int start, int stop) {
     }
     return newarray;
 }
-/*  int* filtriraj(int *niz, int n, int th, int *nth) – vraća novi niz 
+/*
+int* filtriraj(int *niz, int n, int th, int *nth) – vraća novi niz 
 koji sadrži brojeve iz originalnog niza koji su manji od th. 
 Originalni niz ima dužinu n. 
 Dužinu novog niza sa brojevima koji su prošli filter treba spremiti u nth. 
@@ -30,36 +31,59 @@ int* filtriraj(int *niz, int n, int th, int *nth) {
     }
     return noviniz;
 }
-/*  int** podijeli(int *niz, int n) – dijeli niz dužine n na dva jednaka dijela
+/* 
+int** podijeli(int *niz, int n) – dijeli niz dužine n na dva jednaka dijela
  i stvara kopije prvog i drugog dijela. 
-Funkcija vraća dva pokazivača koji pokazuju na prvi i na drugi dio.*/
+Funkcija vraća dva pokazivača koji pokazuju na prvi i na drugi dio.
+*/
 int** podijeli(int *niz, int n){
-    int** returner;
-    int* prviniz,*druginiz;
     if (n == 0)	{
 		return NULL;
 	}
     int len1,len2;
     if (n % 2 == 0)	{
-	   len1 = n / 2;
-	   len2 = n / 2;
+	    len1 = n / 2;
+	    len2 = n / 2;
 	}
 	else{
-		len1 = n / 2;
-		len2 = n - (n / 2);
+	    len1 = n / 2;
+	    len2 = n - (n / 2);
 	}
-    **returner=((int*)malloc(sizeof(int)*2));
-    *prviniz=((int*)malloc(sizeof(int)*(len1)));
-    *druginiz=((int*)malloc(sizeof(int)*(len2)));
+    int **returner=((int*)malloc(sizeof(int)*2));
+    int *prviniz=((int*)malloc(sizeof(int)*(len1)));
+    int *druginiz=((int*)malloc(sizeof(int)*(len2)));
     for (int i=0;i<n/2;i++){
         prviniz[i]=niz[i];
     }
-    for (int i=n/2;i<n;i++){
-        druginiz[i-(n/2)]=niz[i];
+    for (int i=n/2;i<n-1;i++){
+        druginiz[i-len2]=niz[i];
     }
     returner[0]=prviniz;
     returner[1]=druginiz;
     return returner;
+}
+/*
+Deklarirati strukturu Tocka koja sadrži dva člana:
+ x i y (oba su float). Deklarirati strukturu Poligon 
+ koja se sadrži dva člana: niz vrhova (svaki vrh u nizu je Tocka) i broj vrhova n. 
+Napisati funkcije za rad sa poligonima 
+*/
+typedef struct {
+    float x,y;
+}Tocka;
+typedef struct {
+    int n;
+    Tocka *niz_t;
+}Poligon;
+/* 
+Poligon* novi_poligon(float *niz_x, float *niz_y, int n) – 
+prima niz x i y koordinata i stvara 
+novi poligon koji će kao vrhove imati parove brojeva iz nizova. 
+Nizovi su dužine n (≥ 3).
+*/
+Poligon* novi_poligon(float *niz_x, float *niz_y, int n){
+    Poligon *poly=((Poligon*)malloc(sizeof(Poligon)));
+    Tocka *niz_tck=((Tocka*)malloc(sizeof(Tocka)*n));
 }
 
 
@@ -72,7 +96,8 @@ void main (){
     int len=stop-start;
     int* nn=podniz(niz,start,stop);
     int* nnn=filtriraj(niz,nizlen,th,nth);
-    // int** nnnn=podijeli(niz,nizlen);
+    int** nnnn;
+    nnnn=podijeli(niz,nizlen);
     for (int i=0;i<len;i++){
         printf ("nn[i]\t%d[%d]\n",nn[i],i);
     }
@@ -81,4 +106,8 @@ void main (){
         printf ("nnn[i]\t%d[%d]\n",nnn[i],i);
     }
     printf ("\n");
+    for (int i=0;i<nizlen/2-1;i++){
+        printf ("nnnn[i] %d[%d]\n",nnnn[0][i],i);
+        printf ("nnnn[i] %d[%d]\n",nnnn[1][i],i);
+    }
 }

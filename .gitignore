@@ -5,3 +5,4 @@ temp.c
 *.doc
 vjezba1
 vjezba1
+.vscode/.ropeproject/config.py
