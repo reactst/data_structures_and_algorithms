@@ -1,5 +1,6 @@
 
 *.doc#
+*.exe
 vjezba1
 temp.c
 *.doc
