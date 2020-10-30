@@ -34,14 +34,23 @@ int* filtriraj(int *niz, int n, int th, int *nth) {
  i stvara kopije prvog i drugog dijela. 
 Funkcija vraća dva pokazivača koji pokazuju na prvi i na drugi dio.*/
 int** podijeli(int *niz, int n){
+    int** returner;
+    int* prviniz,*druginiz;
     if (n == 0)	{
 		return NULL;
 	}
-    int** returner;
-    int* prviniz,*druginiz;
+    int len1,len2;
+    if (n % 2 == 0)	{
+	   len1 = n / 2;
+	   len2 = n / 2;
+	}
+	else{
+		len1 = n / 2;
+		len2 = n - (n / 2);
+	}
     **returner=((int*)malloc(sizeof(int)*2));
-    *prviniz=((int*)malloc(sizeof(int)*(n/2)));
-    *druginiz=((int*)malloc(sizeof(int)*(n/2)));
+    *prviniz=((int*)malloc(sizeof(int)*(len1)));
+    *druginiz=((int*)malloc(sizeof(int)*(len2)));
     for (int i=0;i<n/2;i++){
         prviniz[i]=niz[i];
     }
