@@ -27,7 +27,6 @@ int* filtriraj(int *niz, int n, int th, int *nth) {
     for (i=0;i<n;i++){
         if (niz[i]<th)
         noviniz[i]=niz[i];
-        
     }
     return noviniz;
 }
@@ -37,17 +36,17 @@ int** podijeli(int *niz, int n) – dijeli niz dužine n na dva jednaka dijela
 Funkcija vraća dva pokazivača koji pokazuju na prvi i na drugi dio.
 */
 int** podijeli(int *niz, int n){
-    if (n == 0)	{
+    if (n==0){
 		return NULL;
 	}
     int len1,len2;
-    if (n % 2 == 0)	{
-	    len1 = n / 2;
-	    len2 = n / 2;
+    if (n%2==0){
+	    len1=n/2;
+	    len2=n/2;
 	}
 	else{
-	    len1 = n / 2;
-	    len2 = n - (n / 2);
+	    len1=n/2;
+	    len2=n-(n/2);
 	}
     int **returner=((int*)malloc(sizeof(int)*2));
     int *prviniz=((int*)malloc(sizeof(int)*(len1)));
@@ -85,8 +84,6 @@ Poligon* novi_poligon(float *niz_x, float *niz_y, int n){
     Poligon *poly=((Poligon*)malloc(sizeof(Poligon)));
     Tocka *niz_tck=((Tocka*)malloc(sizeof(Tocka)*n));
 }
-
-
 void main (){
     int niz[10]={1,2,3,4,5,6,7,8,10};
     int nizlen=sizeof(niz)/sizeof(niz[0]);
@@ -96,8 +93,7 @@ void main (){
     int len=stop-start;
     int* nn=podniz(niz,start,stop);
     int* nnn=filtriraj(niz,nizlen,th,nth);
-    int** nnnn;
-    nnnn=podijeli(niz,nizlen);
+    int** nnnn=podijeli(niz,nizlen);
     for (int i=0;i<len;i++){
         printf ("nn[i]\t%d[%d]\n",nn[i],i);
     }
@@ -107,7 +103,7 @@ void main (){
     }
     printf ("\n");
     for (int i=0;i<nizlen/2-1;i++){
-        printf ("nnnn[i] %d[%d]\n",nnnn[0][i],i);
-        printf ("nnnn[i] %d[%d]\n",nnnn[1][i],i);
+        printf ("nnnn[0][i] %d[%d]\n",nnnn[0][i],i);
+        printf ("nnnn[1][i] %d[%d]\n",nnnn[1][i],i);
     }
 }
