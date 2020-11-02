@@ -18,13 +18,12 @@ Dužinu novog niza sa brojevima koji su prošli filter treba spremiti u nth.
 */
 int* filtriraj(int *niz, int n, int th, int *nth) {
     int* noviniz;
-    int i,j=0;
-    for (i=0;i<n;i++){
+    for (int i=0;i<n;i++){
         if (niz[i]<th)
         nth++;
     }
     *noviniz=(int*)malloc(sizeof(int)*sizeof(nth));
-    for (i=0;i<n;i++){
+    for (int i=0;i<n;i++){
         if (niz[i]<th)
         noviniz[i]=niz[i];
     }
@@ -90,11 +89,13 @@ void main (){
     int th=10;
     int* nth;
     int start=3, stop=8;
-    int len=stop-start;
+    int lenn=stop-start;
+    float nizx[2]={2.231,1.324};
+    float nizy[2]={-1.521,-2,352};
     int* nn=podniz(niz,start,stop);
     int* nnn=filtriraj(niz,nizlen,th,nth);
     int** nnnn=podijeli(niz,nizlen);
-    for (int i=0;i<len;i++){
+    for (int i=0;i<lenn;i++){
         printf ("nn[i]\t%d[%d]\n",nn[i],i);
     }
     printf ("\n");
@@ -106,4 +107,5 @@ void main (){
         printf ("nnnn[0][i] %d[%d]\n",nnnn[0][i],i);
         printf ("nnnn[1][i] %d[%d]\n",nnnn[1][i],i);
     }
+    printf ("\n");
 }
