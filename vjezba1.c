@@ -82,6 +82,13 @@ Nizovi su dužine n (≥ 3).
 Poligon* novi_poligon(float *niz_x, float *niz_y, int n){
     Poligon *poly=((Poligon*)malloc(sizeof(Poligon)));
     Tocka *niz_tck=((Tocka*)malloc(sizeof(Tocka)*n));
+    poly->n = n;
+	poly->niz_t = niz_tck;
+	for (int i = 0; i < n; i++){
+		niz_tck[i].x = niz_x[i];
+		niz_tck[i].y = niz_y[i];
+	}
+	return poly;
 }
 void main (){
     int niz[10]={1,2,3,4,5,6,7,8,10};
@@ -90,11 +97,14 @@ void main (){
     int* nth;
     int start=3, stop=8;
     int lenn=stop-start;
-    float nizx[2]={2.231,1.324};
-    float nizy[2]={-1.521,-2,352};
+    float nizx[4]={2.231,1.324,2.123,4.223};
+    float nizy[4]={-1.521,-2.352,2.241,1.251};
+    int n=4;
     int* nn=podniz(niz,start,stop);
     int* nnn=filtriraj(niz,nizlen,th,nth);
     int** nnnn=podijeli(niz,nizlen);
+    Poligon* np=novi_poligon(nizx,nizy,n);
+    Tocka *tp = np->niz_t;
     for (int i=0;i<lenn;i++){
         printf ("nn[i]\t%d[%d]\n",nn[i],i);
     }
@@ -108,4 +118,7 @@ void main (){
         printf ("nnnn[1][i] %d[%d]\n",nnnn[1][i],i);
     }
     printf ("\n");
+    for (int i = 0; i < n; i++){
+			printf("X=%f\t  Y=%f\n", tp[i].x,tp[i].y);
+		}
 }
