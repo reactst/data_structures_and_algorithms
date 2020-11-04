@@ -75,7 +75,7 @@ typedef struct {
 }Poligon;
 /* 
 Poligon* novi_poligon(float *niz_x, float *niz_y, int n) – 
-prima niz x i y koordinata i stvara 
+prima niz x i y koordinata i stvara
 novi poligon koji će kao vrhove imati parove brojeva iz nizova. 
 Nizovi su dužine n (≥ 3).
 */
