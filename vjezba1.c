@@ -42,8 +42,7 @@ int** podijeli(int *niz, int n){
     if (n%2==0){
 	    len1=n/2;
 	    len2=n/2;
-	}
-	else{
+	}else{
 	    len1=n/2;
 	    len2=n-(n/2);
 	}
@@ -90,6 +89,14 @@ Poligon* novi_poligon(float *niz_x, float *niz_y, int n){
 	}
 	return poly;
 }
+/*
+Tocka** pozitivni(Poligon *p, int *np) – funkcija vraća niz pokazivača
+ na vrhove poligona kojima su obje koordinate pozitivne. 
+Broj elemenata u nizu će biti spremljen u np parametar.
+*/
+Tocka** pozitivni(Poligon *p, int *np){
+    
+}
 void main (){
     int niz[10]={1,2,3,4,5,6,7,8,10};
     int nizlen=sizeof(niz)/sizeof(niz[0]);
@@ -97,14 +104,14 @@ void main (){
     int* nth;
     int start=3, stop=8;
     int lenn=stop-start;
-    float nizx[4]={2.231,1.324,2.123,4.223};
-    float nizy[4]={-1.521,-2.352,2.241,1.251};
-    int n=4;
+    float nizx[]={2.231,1.324,2.123,4.223};
+    float nizy[]={-1.521,-2.352,2.241,1.251};
+    int n=sizeof(nizx)/sizeof(nizx[0]);
     int* nn=podniz(niz,start,stop);
     int* nnn=filtriraj(niz,nizlen,th,nth);
     int** nnnn=podijeli(niz,nizlen);
-    Poligon* np=novi_poligon(nizx,nizy,n);
-    Tocka *tp = np->niz_t;
+    Poligon* npoly=novi_poligon(nizx,nizy,n);
+    Tocka *tp = npoly->niz_t;
     for (int i=0;i<lenn;i++){
         printf ("nn[i]\t%d[%d]\n",nn[i],i);
     }
@@ -119,6 +126,6 @@ void main (){
     }
     printf ("\n");
     for (int i = 0; i < n; i++){
-			printf("X=%f\t  Y=%f\n", tp[i].x,tp[i].y);
+			printf("x=%f\ty=%f\n", tp[i].x,tp[i].y);
 		}
 }
