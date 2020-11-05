@@ -94,8 +94,7 @@ Tocka** pozitivni(Poligon *p, int *np) – funkcija vraća niz pokazivača
  na vrhove poligona kojima su obje koordinate pozitivne. 
 Broj elemenata u nizu će biti spremljen u np parametar.
 */
-Tocka** pozitivni(Poligon *p, int *np){
-    
+Tocka** pozitivni(Poligon *p, int *np){ 
 }
 void main (){
     int niz[10]={1,2,3,4,5,6,7,8,10};

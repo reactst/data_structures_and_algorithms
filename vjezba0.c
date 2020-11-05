@@ -95,6 +95,6 @@ void main (){
     // printf ("ISKOPIRAN string je %s\n", mystrcpy(test,string2));    //MIJENJA (test)string
     printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  
     // printf("strcat string je %s\n", mystrcat(string, string2));             //MIJENJA string
+    // printf ("mystrstr: %s\n",mystrstr(test,testReverse));               
     // printf ("reverse string je %s\n", reverse(string,testReverse));         //MIJENJA testReverse
-    printf ("mystrstr: %s\n",mystrstr(test,testReverse));
 }
