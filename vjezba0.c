@@ -14,7 +14,6 @@ char* mystrcpy (char source[],char dest[]){
         source[i]=dest[i];
         i++;
     }
-    i++;
     dest[i]='\0';
     return dest;
 }
@@ -65,7 +64,7 @@ char* mystrstr(char* string1[],char* string2[]){
             }
         }
         if(test==1){
-           return &(string2[len1+15]);
+           return &(string2[len1]);
         }
     }
      if(test=0){
