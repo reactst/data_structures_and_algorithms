@@ -101,14 +101,14 @@ Tocka** pozitivni(Poligon *p, int *np)
 	Tocka* tockica = p->niz_t;
     int temp=0;
 	int len = p->n;
-	for (int i = 0;i < len;i++)
+	for (int i=0;i<len;i++)
 	{
 		if (tockica[i].x>0 && tockica[i].y>0)	{
 			temp++;
 		}
 	}
 	(*np)=temp;
-	Tocka** pozitivnibr=(Tocka**)malloc(sizeof(Tocka*)*temp);
+	Tocka** pozitivnibr=(Tocka**)malloc(temp*sizeof(Tocka*));
 	int k=0;
 	for (int i=0;i<len;i++)	{
 		if (tockica[i].x>0 && tockica[i].y>0)	{
