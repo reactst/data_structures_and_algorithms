@@ -69,7 +69,7 @@ typedef struct {
     float x,y;
 }Tocka;
 typedef struct {
-    int n;
+    unsigned int n;
     Tocka *niz_t;
 }Poligon;
 /* 
@@ -78,7 +78,7 @@ prima niz x i y koordinata i stvara
 novi poligon koji će kao vrhove imati parove brojeva iz nizova. 
 Nizovi su dužine n (≥ 3).
 */
-Poligon* novi_poligon(float *niz_x, float *niz_y, int n){
+Poligon* novi_poligon(float *niz_x, float *niz_y, unsigned int n){
     Poligon *poly=((Poligon*)malloc(sizeof(Poligon)));
     Tocka *niz_tck=((Tocka*)malloc(sizeof(Tocka)*n));
     poly->n = n;
