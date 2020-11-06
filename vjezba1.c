@@ -151,12 +151,12 @@ void main (){
     }
     printf ("\n");
     for (int i=0;i<n;i++){
-			printf("x=%f\ty=%f\n",tp[i].x,tp[i].y);
+			printf("x=%.2f\ty=%.2f\n",tp[i].x,tp[i].y);
 		}
     printf ("\n");
     printf("Pozitivne tocke su:\n");
 	for (int i=0;i<np;i++){
-			printf("x=%f\ty=%f\n",pozitivci[i][0].x,pozitivci[i][0].y);
+			printf("x=%.2f\ty=%.2f\n",pozitivci[i][0].x,pozitivci[i][0].y);
 		}
 	free(pozitivci);
 	free(tp);
