@@ -3,3 +3,13 @@
 .vscode/tasks.json
 .vscode/launch.json
 .vscode/c_cpp_properties.json
+*.doc#
+*.exe
+vjezba1
+temp.c
+*.doc
+vjezba1
+vjezba1
+.vscode/.ropeproject/config.py
+hw(withoutsemicolons)
+temp
