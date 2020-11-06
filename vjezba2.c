@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <malloc.h>
 typedef struct{
-    float n1,n2,n3,v1x,v1y,v1z,v2x,v2y,v2z,v3x,v3y,v3z;
+    float vars[12];
     unsigned short boja;
 }trokut;
 typedef struct{
@@ -21,18 +21,18 @@ objekt3d binstl_to_object3d (const char binstl[],int n){
     fread(buffer,sizeof(buffer),1,fp1);
     for (int i=0;i<EOF;i++){
         while (i!=0){
-            noviobjekt->niz_trokuta->n1=buffer[i];
-            noviobjekt->niz_trokuta->n2=buffer[i+1];
-            noviobjekt->niz_trokuta->n3=buffer[i+2];
-            noviobjekt->niz_trokuta->v1x=buffer[i+3];
-            noviobjekt->niz_trokuta->v2x=buffer[i+4];
-            noviobjekt->niz_trokuta->v3x=buffer[i+5];
-            noviobjekt->niz_trokuta->v1y=buffer[i+6];
-            noviobjekt->niz_trokuta->v2y=buffer[i+7];
-            noviobjekt->niz_trokuta->v3y=buffer[i+8];
-            noviobjekt->niz_trokuta->v1z=buffer[i+9];
-            noviobjekt->niz_trokuta->v2z=buffer[i+10];
-            noviobjekt->niz_trokuta->v3z=buffer[i+11];
+            // noviobjekt->niz_trokuta->n1=buffer[i];
+            // noviobjekt->niz_trokuta->n2=buffer[i+1];
+            // noviobjekt->niz_trokuta->n3=buffer[i+2];
+            // noviobjekt->niz_trokuta->v1x=buffer[i+3];
+            // noviobjekt->niz_trokuta->v2x=buffer[i+4];
+            // noviobjekt->niz_trokuta->v3x=buffer[i+5];
+            // noviobjekt->niz_trokuta->v1y=buffer[i+6];
+            // noviobjekt->niz_trokuta->v2y=buffer[i+7];
+            // noviobjekt->niz_trokuta->v3y=buffer[i+8];
+            // noviobjekt->niz_trokuta->v1z=buffer[i+9];
+            // noviobjekt->niz_trokuta->v2z=buffer[i+10];
+            // noviobjekt->niz_trokuta->v3z=buffer[i+11];
         }
     }
 }
