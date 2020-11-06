@@ -150,13 +150,13 @@ void main (){
         printf ("nnnn[1][i] %d[%d]\n",nnnn[1][i],i);
     }
     printf ("\n");
-    for (int i = 0; i < n; i++){
-			printf("x=%f\ty=%f\n", tp[i].x,tp[i].y);
+    for (int i=0;i<n;i++){
+			printf("x=%f\ty=%f\n",tp[i].x,tp[i].y);
 		}
     printf ("\n");
     printf("Pozitivne tocke su:\n");
-	for (int i = 0;i < np;i++){
-			printf("x=%f\ty=%f\n", pozitivci[i][0].x, pozitivci[i][0].y);
+	for (int i=0;i<np;i++){
+			printf("x=%f\ty=%f\n",pozitivci[i][0].x,pozitivci[i][0].y);
 		}
 	free(pozitivci);
 	free(tp);
