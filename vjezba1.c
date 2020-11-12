@@ -121,7 +121,7 @@ Tocka** pozitivni(Poligon *p, int *np)
 	return pozitivnibr;
 }
 void main (){
-    int niz[10]={1,2,3,4,5,6,7,8,10};
+    int niz[12]={1,2,3,4,5,6,7,8,0,11,12,10};
     int nizlen=sizeof(niz)/sizeof(niz[0]);
     int th=10;
     int* nth;
@@ -141,7 +141,7 @@ void main (){
         printf ("nn[i]\t%d[%d]\n",nn[i],i);
     }
     printf ("\n");
-    for (int i=0;i<sizeof(nth);i++){
+    for (int i=0;i<sizeof(nth)+1;i++){
         printf ("nnn[i]\t%d[%d]\n",nnn[i],i);
     }
     printf ("\n");
