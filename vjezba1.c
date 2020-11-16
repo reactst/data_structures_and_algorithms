@@ -18,11 +18,13 @@ Dužinu novog niza sa brojevima koji su prošli filter treba spremiti u nth.
 */
 int* filtriraj(int *niz, int n, int th, int *nth) {
     int* noviniz;
-    for (int i=0;i<n;i++){
+    for (int i=0;i<=n;i++){
         if (niz[i]<th)
-        nth++;
+        (*nth)++;
     }
-    *noviniz=(int*)malloc(sizeof(int)*sizeof(nth));
+    printf ("%d je nth u funk\n",*nth);
+    
+    *noviniz=(int*)malloc(sizeof(int)*(*nth));
     for (int i=0;i<n;i++){
         if (niz[i]<th)
         noviniz[i]=niz[i];
@@ -46,13 +48,13 @@ int** podijeli(int *niz, int n){
 	    len1=n/2;
 	    len2=n-(n/2);
 	}
-    int **returner=((int*)malloc(sizeof(int)*2));
+    int **returner=((int**)malloc(sizeof(int)*2));
     int *prviniz=((int*)malloc(sizeof(int)*(len1)));
     int *druginiz=((int*)malloc(sizeof(int)*(len2)));
     for (int i=0;i<n/2;i++){
         prviniz[i]=niz[i];
     }
-    for (int i=n/2;i<n-1;i++){
+    for (int i=n/2;i<n;i++){
         druginiz[i-len2]=niz[i];
     }
     returner[0]=prviniz;
@@ -121,10 +123,10 @@ Tocka** pozitivni(Poligon *p, int *np)
 	return pozitivnibr;
 }
 void main (){
-    int niz[12]={1,2,3,4,5,6,7,8,0,11,12,10};
+    int niz[12]={1,2,3,4,5,6,7,8,9,11,12,10};
     int nizlen=sizeof(niz)/sizeof(niz[0]);
     int th=10;
-    int* nth;
+    int nth=0;
     int start=3, stop=8;
     int lenn=stop-start;
     float nizx[]={2.231,1.324,2.123,4.223};
@@ -132,7 +134,8 @@ void main (){
     int n=sizeof(nizx)/sizeof(nizx[0]);
     int np;
     int* nn=podniz(niz,start,stop);
-    int* nnn=filtriraj(niz,nizlen,th,nth);
+    int* nnn=filtriraj(&niz,nizlen,th,&nth);
+    printf ("%d NTH MAIN\n",nth);
     int** nnnn=podijeli(niz,nizlen);
     Poligon* npoly=novi_poligon(nizx,nizy,n);
     Tocka *tp = npoly->niz_t;
@@ -141,7 +144,7 @@ void main (){
         printf ("nn[i]\t%d[%d]\n",nn[i],i);
     }
     printf ("\n");
-    for (int i=0;i<sizeof(nth)+1;i++){
+    for (int i=0;i<nth;i++){
         printf ("nnn[i]\t%d[%d]\n",nnn[i],i);
     }
     printf ("\n");
