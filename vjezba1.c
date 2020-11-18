@@ -7,6 +7,7 @@ int* podniz (int* niz, int start, int stop) {
     for (int i=0;i<razlika;i++){
         newarray[i]=niz[start];
         start++;
+        printf ("%d[%d] newarray\n",newarray[i],i);
     }
     return newarray;
 }
@@ -133,7 +134,7 @@ void main (){
     float nizy[]={-1.521,-2.352,2.241,1.251};
     int n=sizeof(nizx)/sizeof(nizx[0]);
     int np;
-    int* nn=podniz(niz,start,stop);
+    int* nn=podniz(&niz,start,stop);
     int* nnn=filtriraj(&niz,nizlen,th,&nth);
     printf ("%d NTH MAIN\n",nth);
     int** nnnn=podijeli(niz,nizlen);
