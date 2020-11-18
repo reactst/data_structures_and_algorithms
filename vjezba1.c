@@ -26,9 +26,11 @@ int* filtriraj(int *niz, int n, int th, int *nth) {
     printf ("%d je nth u funk\n",*nth);
     
     *noviniz=(int*)malloc(sizeof(int)*(*nth));
+    int nnbrojac=0;
     for (int i=0;i<n;i++){
         if (niz[i]<th)
-        noviniz[i]=niz[i];
+        noviniz[nnbrojac]=niz[i];
+        nnbrojac++;
     }
     return noviniz;
 }
@@ -52,7 +54,7 @@ int** podijeli(int *niz, int n){
     int **returner=((int**)malloc(sizeof(int)*2));
     int *prviniz=((int*)malloc(sizeof(int)*(len1)));
     int *druginiz=((int*)malloc(sizeof(int)*(len2)));
-    for (int i=0;i<n/2;i++){
+    for (int i=0;i<len1;i++){
         prviniz[i]=niz[i];
     }
     for (int i=len1;i<n;i++){
@@ -124,7 +126,7 @@ Tocka** pozitivni(Poligon *p, int *np)
 	return pozitivnibr;
 }
 void main (){
-    int niz[12]={1,2,3,4,5,6,7,8,9,11,12,10};
+    int niz[12]={1,3,15,4,25,6,99,8,9,11,12,10};
     int nizlen=sizeof(niz)/sizeof(niz[0]);
     int th=10;
     int nth=0;
@@ -136,7 +138,6 @@ void main (){
     int np;
     int* nn=podniz(&niz,start,stop);
     int* nnn=filtriraj(&niz,nizlen,th,&nth);
-    printf ("%d NTH MAIN\n",nth);
     int** nnnn=podijeli(niz,nizlen);
     Poligon* npoly=novi_poligon(nizx,nizy,n);
     Tocka *tp = npoly->niz_t;
@@ -149,7 +150,7 @@ void main (){
         printf ("nnn[i]\t%d[%d]\n",nnn[i],i);
     }
     printf ("\n");
-    for (int i=0;i<nizlen/2-1;i++){
+    for (int i=0;i<nizlen/2;i++){
         printf ("nnnn[0][i] %d[%d]\n",nnnn[0][i],i);
         printf ("nnnn[1][i] %d[%d]\n",nnnn[1][i],i);
     }
