@@ -3,7 +3,7 @@
 //int* podniz(int *niz, int start, int stop) – vraća novi niz koji je kopija dijela niza od indeksa start do indeksa stop. 
 int* podniz (int* niz, int start, int stop) {
     int razlika=stop-start;
-    int* newarray=((int*)malloc(sizeof(int)*razlika));
+    int* newarray=(int*)malloc(sizeof(int)*razlika);
     for (int i=0;i<razlika;i++){
         newarray[i]=niz[start];
         start++;
@@ -23,8 +23,6 @@ int* filtriraj(int *niz, int n, int th, int *nth) {
         if (niz[i]<th)
         (*nth)++;
     }
-    printf ("%d je nth u funk\n",*nth);
-    
     *noviniz=(int*)malloc(sizeof(int)*(*nth));
     int nnbrojac=0;
     for (int i=0;i<n;i++){
@@ -102,7 +100,6 @@ Broj elemenata u nizu će biti spremljen u np parametar.
 Tocka** pozitivni(Poligon *p, int *np)
 {
 	Poligon* poly2 = p;
-    Poligon* polytemp= p->niz_t;
 	Tocka* tockica = p->niz_t;
     int temp=0;
 	int len = p->n;
@@ -122,7 +119,6 @@ Tocka** pozitivni(Poligon *p, int *np)
 		}
 		poly2->niz_t++;
 	}
-	poly2=polytemp;
 	return pozitivnibr;
 }
 void main (){
@@ -132,12 +128,12 @@ void main (){
     int nth=0;
     int start=3, stop=8;
     int lenn=stop-start;
+    int* nn=podniz(niz,start,stop);
     float nizx[]={2.231,1.324,2.123,4.223};
     float nizy[]={-1.521,-2.352,2.241,1.251};
     int n=sizeof(nizx)/sizeof(nizx[0]);
     int np;
-    int* nn=podniz(&niz,start,stop);
-    int* nnn=filtriraj(&niz,nizlen,th,&nth);
+    int* nnn=filtriraj(niz,nizlen,th,&nth);
     int** nnnn=podijeli(niz,nizlen);
     Poligon* npoly=novi_poligon(nizx,nizy,n);
     Tocka *tp = npoly->niz_t;
@@ -163,7 +159,10 @@ void main (){
 	for (int i=0;i<np;i++){
 			printf("x=%.2f\ty=%.2f\n",pozitivci[i][0].x,pozitivci[i][0].y);
 		}
-	free(pozitivci);
-	free(tp);
+    //FREE SECTION
+    free(nn);
+    free(nnn);
+    free(nnnn);
     free(npoly);
+    free(pozitivci);
 }
