@@ -55,7 +55,7 @@ int** podijeli(int *niz, int n){
     for (int i=0;i<n/2;i++){
         prviniz[i]=niz[i];
     }
-    for (int i=n/2;i<n;i++){
+    for (int i=len1;i<n;i++){
         druginiz[i-len2]=niz[i];
     }
     returner[0]=prviniz;
