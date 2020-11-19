@@ -1,6 +1,6 @@
 #include <stdio.h>
 //mystrlen() – funkcija prima string (char*) i vraća integer koji predstavlja dužinu stringa.
-int mystrlen (char unos[]) {
+int mystrlen (char* unos) {
     int lenght=0;
     for (int i=0;unos[i]!='\0';i++){
         lenght++;
@@ -14,8 +14,8 @@ char* mystrcpy (char source[],char dest[]){
         source[i]=dest[i];
         i++;
     }
-    dest[i]='\0';
-    return dest;
+    source[i]='\0';
+    return source;
 }
 /*
 mystrcmp() – funkcija prima dva stringa i uspoređuje ih. 
@@ -41,8 +41,9 @@ int mystrcmp (char str1[],char str2[]){
 char* mystrcat(char str1[],char str2[]) {
     int len2 = mystrlen(str2);
     int len1 = mystrlen(str1);
-    for (int i=0; i <= len2; i++,len1++) {
+    for (int i=0; i < len2; i++) {
         str1[len1] = str2[i];
+        len1++;
     }
     return str1;
 }
@@ -88,11 +89,11 @@ void main (){
     char string[] = "ABCDE";
     char string2[] = "ABCDP";
     char test[] = "TESTREVERSE";
-    char testReverse[] = "TESTREVERSE";
+    char testReverse[] = "REVERSE";
     printf ("Duljina stringa je %d\n", mystrlen(string));
     printf ("Duljina stringa je %d\n", mystrlen(string2));
-    // printf ("ISKOPIRAN string je %s\n", mystrcpy(test,string2));    //MIJENJA (test)string
-    printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  
+    //printf ("ISKOPIRAN string je %s\n", mystrcpy(test,string2));    //MIJENJA (test)string
+    //printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  
     // printf("strcat string je %s\n", mystrcat(string, string2));             //MIJENJA string
     // printf ("mystrstr: %s\n",mystrstr(test,testReverse));               
     // printf ("reverse string je %s\n", reverse(string,testReverse));         //MIJENJA testReverse
