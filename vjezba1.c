@@ -26,9 +26,10 @@ int* filtriraj(int *niz, int n, int th, int *nth) {
     *noviniz=(int*)malloc(sizeof(int)*(*nth));
     int nnbrojac=0;
     for (int i=0;i<n;i++){
-        if (niz[i]<th)
-        noviniz[nnbrojac]=niz[i];
-        nnbrojac++;
+        if (niz[i]<th){
+            noviniz[nnbrojac]=niz[i];
+            nnbrojac++;
+        }
     }
     return noviniz;
 }
@@ -49,7 +50,7 @@ int** podijeli(int *niz, int n){
 	    len1=n/2;
 	    len2=n-(n/2);
 	}
-    int **returner=((int**)malloc(sizeof(int)*2));
+    int **returner=((int**)malloc(sizeof(int*)*2));
     int *prviniz=((int*)malloc(sizeof(int)*(len1)));
     int *druginiz=((int*)malloc(sizeof(int)*(len2)));
     for (int i=0;i<len1;i++){
@@ -125,7 +126,7 @@ void main (){
     int niz[12]={1,3,15,4,25,6,99,8,9,11,12,10};
     int nizlen=sizeof(niz)/sizeof(niz[0]);
     int th=10;
-    int nth=0;
+    int nth;
     int start=3, stop=8;
     int lenn=stop-start;
     int* nn=podniz(niz,start,stop);
@@ -160,9 +161,11 @@ void main (){
 			printf("x=%.2f\ty=%.2f\n",pozitivci[i][0].x,pozitivci[i][0].y);
 		}
     //FREE SECTION
-    free(nn);
+    //free(nn);
     free(nnn);
-    free(nnnn);
+    free(nnnn[0]);
+    free(nnnn[1]);
     free(npoly);
+    free(tp);
     free(pozitivci);
 }
