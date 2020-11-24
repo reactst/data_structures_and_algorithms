@@ -18,12 +18,13 @@ Originalni niz ima dužinu n.
 Dužinu novog niza sa brojevima koji su prošli filter treba spremiti u nth. 
 */
 int* filtriraj(int *niz, int n, int th, int *nth) {
+    *nth=0;
     int* noviniz;
     for (int i=0;i<=n;i++){
         if (niz[i]<th)
         (*nth)++;
     }
-    *noviniz=(int*)malloc(sizeof(int)*(*nth));
+    noviniz=(int*)malloc(sizeof(int)*(*nth));
     int nnbrojac=0;
     for (int i=0;i<n;i++){
         if (niz[i]<th){
@@ -123,7 +124,7 @@ Tocka** pozitivni(Poligon *p, int *np)
 	return pozitivnibr;
 }
 void main (){
-    int niz[12]={1,3,15,4,25,6,99,8,9,11,12,10};
+    int niz[]={1,3,15,4,25,6,99,8,9,11,12,10};
     int nizlen=sizeof(niz)/sizeof(niz[0]);
     int th=10;
     int nth;
@@ -161,10 +162,11 @@ void main (){
 			printf("x=%.2f\ty=%.2f\n",pozitivci[i][0].x,pozitivci[i][0].y);
 		}
     //FREE SECTION
-    //free(nn);
-    free(nnn);
+    free (nnnn);
     free(nnnn[0]);
     free(nnnn[1]);
+    free(nn);
+    free(nnn);
     free(npoly);
     free(tp);
     free(pozitivci);

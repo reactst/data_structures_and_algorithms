@@ -68,10 +68,8 @@ char* mystrstr(char* string1[],char* string2[]){
            return &(string2[len1]);
         }
     }
-     if(test=0){
         return NULL;
     }
-}
 //reverse() – prima dva stringa i kopira prvi string u drugi string naopako (funkcija ne postoji u string.h)
 char* reverse (char source[],char dest[]){
     int i=mystrlen(source)-1;
@@ -95,6 +93,6 @@ void main (){
     //printf ("ISKOPIRAN string je %s\n", mystrcpy(test,string2));    //MIJENJA (test)string
     //printf ("Leksikografski veći je %d\n",mystrcmp (string,string2));  
     // printf("strcat string je %s\n", mystrcat(string, string2));             //MIJENJA string
-    // printf ("mystrstr: %s\n",mystrstr(test,testReverse));               
-    // printf ("reverse string je %s\n", reverse(string,testReverse));         //MIJENJA testReverse
+    printf ("mystrstr: %s\n",mystrstr(test,testReverse));               
+    // printf ("reverse string ježž %s\n", reverse(string,testReverse));         //MIJENJA testReverse
 }
