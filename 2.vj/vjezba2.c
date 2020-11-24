@@ -85,12 +85,12 @@ void object3d_to_binstl (objekt3d* struktura3d){
 //OBJEKT3D U TXT FILE
 void object3d_to_txt(objekt3d* struktura3d) {
 	FILE *newfiletxt= fopen("pretvorbatxt.stl","w");
-	fprintf(newfiletxt, "solid STL\n");
+	fprintf(newfiletxt, "solid OpenSCAD_Model\n");
 	for (int i=0; i < struktura3d->n; i++) {
-		fprintf(newfiletxt, "facet normal %f %f %f\n", struktura3d->niz[i].normala[0], struktura3d->niz[i].normala[1], struktura3d->niz[i].normala[2]);
-		fprintf(newfiletxt, "outer loop\nvertex %f %f %f\n", struktura3d->niz[i].vrhovi->niz[0], struktura3d->niz[i].vrhovi[0].niz[1], struktura3d->niz[i].vrhovi[0].niz[2]);
-		fprintf(newfiletxt, "vertex %f %f %f\n", struktura3d->niz[i].vrhovi->niz[1], struktura3d->niz[i].vrhovi[1].niz[1], struktura3d->niz[i].vrhovi[1].niz[2]);
-		fprintf(newfiletxt, "vertex %f %f %f\nendloop\nendfacet\n", struktura3d->niz[i].vrhovi->niz[2], struktura3d->niz[i].vrhovi[2].niz[1], struktura3d->niz[i].vrhovi[2].niz[2]);
+		fprintf(newfiletxt, "\tfacet normal %f %f %f\n", struktura3d->niz[i].normala[0], struktura3d->niz[i].normala[1], struktura3d->niz[i].normala[2]);
+		fprintf(newfiletxt, "\t\touter loop\n\t\t\tvertex %f %f %f\n", struktura3d->niz[i].vrhovi->niz[0], struktura3d->niz[i].vrhovi[0].niz[1], struktura3d->niz[i].vrhovi[0].niz[2]);
+		fprintf(newfiletxt, "\t\t\tvertex %f %f %f\n", struktura3d->niz[i].vrhovi->niz[1], struktura3d->niz[i].vrhovi[1].niz[1], struktura3d->niz[i].vrhovi[1].niz[2]);
+		fprintf(newfiletxt, "\t\t\tvertex %f %f %f\n\t\tendloop\n\tendfacet\n", struktura3d->niz[i].vrhovi->niz[2], struktura3d->niz[i].vrhovi[2].niz[1], struktura3d->niz[i].vrhovi[2].niz[2]);
 	}
 	fprintf(newfiletxt, "endsolid STL");
 }
