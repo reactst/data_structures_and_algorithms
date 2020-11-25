@@ -68,8 +68,8 @@ char* mystrstr(char* string1[],char* string2[]){
            return &(string2[len1]);
         }
     }
-        return NULL;
-    }
+    return NULL;
+}
 //reverse() – prima dva stringa i kopira prvi string u drugi string naopako (funkcija ne postoji u string.h)
 char* reverse (char source[],char dest[]){
     int i=mystrlen(source)-1;
