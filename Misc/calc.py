@@ -2,7 +2,7 @@
 import time
 time.sleep(1.27)
 print ("EDLE v1.4 framework loaded in 1.27 sec")
-grama=int(input("Weight: \n"))
+grama=float(input("Weight: \n"))
 para=int(input("Money: \n"))
 jedange=para/grama
 print ("1 UNIT costs",jedange, "\n","5 UNITS costs",jedange*5,"\n","15 UNITS costs",jedange*15,"\n")
