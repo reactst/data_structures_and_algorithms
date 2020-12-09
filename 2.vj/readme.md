@@ -25,10 +25,10 @@ Za binarni format:
 Prilikom čitanja/pisanja pripazite da će zapis u binarnoj datoteci zauzimati 50 byte-ova, a struktura trokut 52 byte-a.
 
 Potrebno je definirati strukturu Trokut koja će predstavljati jedan trokut sa normalom i sa dodatnim unsigned short brojem (boja trokuta), ukupno 50 byte-ova. Definirati dodatnu strukturu Objekt3D koja će sadržati niz trokuta i njihov broj. Možete definirati i iskoristiti dodatnu strukturu Vrh za koordinate vrhova trokuta. Potrebno je napisati i testirati funkcije:
-    • Funkciju koja čita binarnu STL datoteku i vraća ispunjenu Objekt3D  strukturu
-    • Funkciju koja Objekt3D strukturu zapisuje u binarnu STL datoteku
-    • Funkcija koja Objekt3D strukturu zapisuje u tekstualnu STL datoteku
-    • Funkciju koja briše Objekt3D strukturu
+    1) Funkciju koja čita binarnu STL datoteku i vraća ispunjenu Objekt3D  strukturu
+    2) Funkciju koja Objekt3D strukturu zapisuje u binarnu STL datoteku
+    3) Funkcija koja Objekt3D strukturu zapisuje u tekstualnu STL datoteku
+    4) Funkciju koja briše Objekt3D strukturu
 
 
 Dodatno:
