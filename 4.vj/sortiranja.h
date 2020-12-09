@@ -11,5 +11,6 @@ int partition(int *niz, int n);
 void quicksort(int *niz, int n);
 void merge(int *niz, int *niza, int na, int *nizb, int nb);
 int* duplicate(int *niz, int n);
+void autosort(int *niz, int n);
 double measure(void(*sort)(int *niz, int n), int *niz, int n);
 #endif

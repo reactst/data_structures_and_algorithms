@@ -18,15 +18,15 @@ void main (){
         shuffle(mixmixmix,n);
         timesort=measure(quicksort,niz,n);
         timeunsort=measure(quicksort,mixmixmix,n);
-        printf ("%d.QUICKSORT(SORTIRAN)   SA PIVOTOM %lfs ZA DULJINU %d\n",i,timesort,n);
-        printf ("%d.QUICKSORT(NESORTIRAN) SA PIVOTOM %lfs ZA DULJINU %d\n",i,timeunsort,n);
+        printf ("%d.QUICKSORT(SORTIRAN)         PIVOT:YES\t VRIJEME:%lfs\t ZA DULJINU %d\n",i,timesort,n);
+        printf ("%d.QUICKSORT(NESORTIRAN)       PIVOT:YES\t VRIJEME:%lfs\t ZA DULJINU %d\n",i,timeunsort,n);
         printf ("\n");
         free(mixmixmix);
         free(niz);
         n+=10000;
     }
     printf ("------------------------------------\n");
-    n=10000;
+    n=10000; //NEPODNOSLJIV IZA 1000000
     choose_pivot=0;
     for (int i=0;i<10;i++){
         //print (niz,n);
@@ -35,8 +35,8 @@ void main (){
         shuffle(mixmixmix,n);
         timesort=measure(quicksort,niz,n);
         timeunsort=measure(quicksort,mixmixmix,n);
-        printf ("%d.QUICKSORT(SORTIRAN)   BEZ PIVOTA %lfs ZA DULJINU %d\n",i,timesort,n);
-        printf ("%d.QUICKSORT(NESORTIRAN) BEZ PIVOTA %lfs ZA DULJINU %d\n",i,timeunsort,n);
+        printf ("%d.QUICKSORT(SORTIRAN)         PIVOT:NO\t VRIJEME:%lf s\t ZA DULJINU %d\n",i,timesort,n);
+        printf ("%d.QUICKSORT(NESORTIRAN)       PIVOT:NO\t VRIJEME:%lf s\t ZA DULJINU %d\n",i,timeunsort,n);
         printf ("\n");
         free(mixmixmix);
         free(niz);
@@ -60,6 +60,18 @@ void main (){
         shuffle(mixmixmix,n_min);
         timesort=measure(insertionsort,niz,n_min);
         timeunsort=measure(insertionsort,mixmixmix,n_min);
+        printf ("NIZ SIZE=%d\tUNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
+        free (mixmixmix);
+        free (niz);
+    }
+    //n_min=25; //najbolje
+    printf ("--------AUTO-SORT-------------------\n");
+        for (n_min=0;n_min<2001;n_min+=50){
+        niz=generiraj(n_min);
+        int* mixmixmix=duplicate(niz,n_min);
+        shuffle(mixmixmix,n_min);
+        timesort=measure(autosort,niz,n_min);
+        timeunsort=measure(autosort,mixmixmix,n_min);
         printf ("NIZ SIZE=%d\tUNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
         free (mixmixmix);
         free (niz);

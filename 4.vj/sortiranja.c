@@ -102,7 +102,7 @@ int partition(int *niz, int n){
 		l = 0;
 		swap(niz, l, med);
 	}
-	while (l < r)	{
+	while (l < r){
 		if (niz[r] >= niz[0]){
 			r--;
 		}
@@ -164,6 +164,20 @@ int *duplicate(int *niz, int n){
 		novi[i] = niz[i];
 	}
 	return novi;
+}
+void autosort(int *niz, int n){
+	if (n < 2)
+		return;
+	if (n <= n_min)	{
+		selectionsort(niz, n);
+	}
+	else	{
+		if (n < 2)
+			return;
+		int pi = partition(niz, n);
+		autosort(niz, pi);
+		autosort(niz + pi + 1, n - pi - 1);
+	}
 }
 // mjerenje vremena izvodenja funkcije sortiranja
 double measure(void (*sort)(int *niz, int n), int *niz, int n){
