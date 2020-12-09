@@ -1,9 +1,5 @@
 #include "sortiranja.h"
 #include "sortiranja.c"
-#include <stdio.h>
-#include <malloc.h>
-#include <stdlib.h>
-#include <stdbool.h>
 
 void main (){
     srand(time(NULL));
@@ -49,7 +45,7 @@ void main (){
         shuffle(mixmixmix,n_min);
         timesort=measure(selectionsort,niz,n_min);
         timeunsort=measure(selectionsort,mixmixmix,n_min);
-        printf ("%d.UNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
+        printf ("NIZ SIZE:%d\tUNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
         free (mixmixmix);
         free (niz);
     }
@@ -60,19 +56,19 @@ void main (){
         shuffle(mixmixmix,n_min);
         timesort=measure(insertionsort,niz,n_min);
         timeunsort=measure(insertionsort,mixmixmix,n_min);
-        printf ("NIZ SIZE=%d\tUNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
+        printf ("NIZ SIZE:%d\tUNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
         free (mixmixmix);
         free (niz);
     }
     //n_min=25; //najbolje
     printf ("--------AUTO-SORT-------------------\n");
-        for (n_min=0;n_min<2001;n_min+=50){
+        for (n_min=0;n_min<201;n_min+=5){
         niz=generiraj(n_min);
         int* mixmixmix=duplicate(niz,n_min);
         shuffle(mixmixmix,n_min);
         timesort=measure(autosort,niz,n_min);
         timeunsort=measure(autosort,mixmixmix,n_min);
-        printf ("NIZ SIZE=%d\tUNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
+        printf ("NIZ SIZE:%d\tUNSORTED: %lf\tSORTED: %lf\n",n_min,timesort,timeunsort);
         free (mixmixmix);
         free (niz);
     }
