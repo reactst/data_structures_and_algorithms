@@ -7,13 +7,13 @@ Napisati funkcije za rad sa datotekama u STL formatu (format za opis 3D objekata
 Za tekstualni format:
     • Zaglavlje je jedna linija teksta „solid ime„ gdje je ime proizvoljno i može biti prazno
     • Svaki trokut je opisan sa idućim linijama gdje su n i v realni brojevi:
-facet normal ni nj nk
+    facet normal ni nj nk
     outer loop
-        vertex v1x v1y v1z
-        vertex v2x v2y v2z
-        vertex v3x v3y v3z
+    vertex v1x v1y v1z
+    vertex v2x v2y v2z
+    vertex v3x v3y v3z
     endloop
-endfacet
+    endfacet
 
 Za binarni format:
     • Zaglavlje je dugo 80 byte-ova i može biti ignorirano pri čitanju i ispunjeno nulama pri stvaranju datoteke. Nakon toga se nalazi broj trokuta u datoteci (unsigned int).
