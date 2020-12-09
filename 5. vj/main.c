@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <ctype.h>
 #include "dictionary.h"
+#include "dictionary.c"
 
-int readWord(FILE *fd, char *buffer)
-{
+int readWord(FILE *fd, char *buffer){
 	int c;
-	
 	do {
 		c = fgetc(fd);				
 		if(c == EOF)
@@ -16,37 +15,30 @@ int readWord(FILE *fd, char *buffer)
 		*buffer = tolower(c);
 		buffer++;
 		c = fgetc(fd);
-		if(c == 146)
+		if(c == 146) //C=' '
 			c = '\'';
 	} while(isalpha(c) || c == '\'');
-
 	*buffer = '\0';
 	return 1;
 }
 
-void main()
-{
+void main(){
 	FILE *fd;
 	char buffer[1024];
 	Dictionary dict;
 				
 	fd = fopen("liar.txt", "rt");
-	if(fd == NULL)
-	{
+	if(fd == NULL)	{
 		printf("Error opening file.\n");
 		return;
 	}
-
-	//dict = create();
-	while(readWord(fd, buffer))
-	{
-		printf("%s\n", buffer);
-		//add(dict, buffer);
+	dict = create();
+	while(readWord(fd, buffer))	{
+		add(dict, buffer);
 	}
-
 	fclose(fd);
-
-	//print(dict);
-
-	//destroy(dict);
+	print(dict);
+	filterDictionary(dict, filter);
+	print(dict);
+	destroy(dict);
 }

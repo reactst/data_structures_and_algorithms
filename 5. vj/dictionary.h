@@ -1,5 +1,5 @@
 #ifndef DICTIONARY_H
-#define DICTIONARY_H
+#define DICTIONARY_H 1
 
 typedef struct Word {
 	char *word; // rijec
@@ -19,7 +19,11 @@ void add(Dictionary dict, char *str);
 // ispisuje sve rijeci i broj pojavljivanja svake rijeci
 void print(Dictionary dict);
 
-// briše cijeli rjeènik
+// briï¿½e cijeli rjeï¿½nik
 void destroy(Dictionary dict);
+
+Dictionary filterDictionary(Dictionary indict, int (*filter)(Word *w));
+
+int filter(Word *w);
 
 #endif
