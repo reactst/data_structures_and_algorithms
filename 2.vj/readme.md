@@ -2,20 +2,25 @@
 
 Datoteke i strukture
 
+
 Napisati funkcije za rad sa datotekama u STL formatu (format za opis 3D objekata). Osnovni STL format je sastavljen od zaglavlja i niza trokuta (od kojih je sastavljena površina 3D objekta). STL format može biti tekstualan ili binaran. 
 
+
 Za tekstualni format:
-    • Zaglavlje je jedna linija teksta „solid ime„ gdje je ime proizvoljno i može biti prazno
-    • Svaki trokut je opisan sa idućim linijama gdje su n i v realni brojevi:
-    facet normal ni nj nk
-    outer loop
-    vertex v1x v1y v1z
-    vertex v2x v2y v2z
-    vertex v3x v3y v3z
-    endloop
-    endfacet
+    
+			• Zaglavlje je jedna linija teksta „solid ime„ gdje je ime proizvoljno i može biti prazno
+   		 • Svaki trokut je opisan sa idućim linijama gdje su n i v realni brojevi:
+		
+        facet normal ni nj nk
+            outer loop
+                vertex v1x v1y v1z
+                vertex v2x v2y v2z
+                vertex v3x v3y v3z
+            endloop
+        endfacet
 
 Za binarni format:
+
     • Zaglavlje je dugo 80 byte-ova i može biti ignorirano pri čitanju i ispunjeno nulama pri stvaranju datoteke. Nakon toga se nalazi broj trokuta u datoteci (unsigned int).
     • Svaki trokut je opisan sa 12 realnih brojeva (float):
         ◦ Prva tri 3 broja su normala
@@ -25,10 +30,11 @@ Za binarni format:
 Prilikom čitanja/pisanja pripazite da će zapis u binarnoj datoteci zauzimati 50 byte-ova, a struktura trokut 52 byte-a.
 
 Potrebno je definirati strukturu Trokut koja će predstavljati jedan trokut sa normalom i sa dodatnim unsigned short brojem (boja trokuta), ukupno 50 byte-ova. Definirati dodatnu strukturu Objekt3D koja će sadržati niz trokuta i njihov broj. Možete definirati i iskoristiti dodatnu strukturu Vrh za koordinate vrhova trokuta. Potrebno je napisati i testirati funkcije:
-    1) Funkciju koja čita binarnu STL datoteku i vraća ispunjenu Objekt3D  strukturu
-    2) Funkciju koja Objekt3D strukturu zapisuje u binarnu STL datoteku
-    3) Funkcija koja Objekt3D strukturu zapisuje u tekstualnu STL datoteku
-    4) Funkciju koja briše Objekt3D strukturu
+   	
+		1) Funkciju koja čita binarnu STL datoteku i vraća ispunjenu Objekt3D  strukturu
+   	2) Funkciju koja Objekt3D strukturu zapisuje u binarnu STL datoteku
+   	3) Funkcija koja Objekt3D strukturu zapisuje u tekstualnu STL datoteku
+   	4) Funkciju koja briše Objekt3D strukturu
 
 
 Dodatno:
