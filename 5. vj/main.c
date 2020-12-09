@@ -2,7 +2,6 @@
 #include <ctype.h>
 #include "dictionary.h"
 #include "dictionary.c"
-
 int readWord(FILE *fd, char *buffer){
 	int c;
 	do {
@@ -26,7 +25,6 @@ void main(){
 	FILE *fd;
 	char buffer[1024];
 	Dictionary dict;
-				
 	fd = fopen("liar.txt", "rt");
 	if(fd == NULL)	{
 		printf("Error opening file.\n");
@@ -38,7 +36,7 @@ void main(){
 	}
 	fclose(fd);
 	print(dict);
-	filterDictionary(dict, filter);
-	print(dict);
+	// filterDictionary(dict, filter);
+	// print(dict);
 	destroy(dict);
 }

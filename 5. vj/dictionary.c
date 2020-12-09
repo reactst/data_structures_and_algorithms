@@ -3,7 +3,6 @@
 #include <string.h>
 Dictionary create(){
     Dictionary dict=(Word*)malloc(sizeof(Word));
-    dict->word = "Bezveze";
     dict->count=0;
     dict->next=NULL;
     return dict;
@@ -28,9 +27,8 @@ void add(Dictionary dict, char *str){
             temp->next = novi;
             return;
         }
-        else {
+        else 
             temp = temp->next;
-        }
     }
 }
 void print(Dictionary dict){
