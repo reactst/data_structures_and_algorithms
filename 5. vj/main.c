@@ -35,8 +35,9 @@ void main(){
 		add(dict, buffer);
 	}
 	fclose(fd);
+	//print(dict);
+	filterDictionary(dict, filter);
+	printf ("IZA FILTERA\n");
 	print(dict);
-	// filterDictionary(dict, filter);
-	// print(dict);
 	destroy(dict);
 }
