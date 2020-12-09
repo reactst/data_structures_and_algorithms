@@ -2,9 +2,12 @@
 #include <stdlib.h>
 #include <malloc.h>
 #include <time.h>
-
+#include <stdbool.h>
+bool choose_pivot=1;
+int n_min=0;
 // pomocne funkcije
 int *generiraj(int n){
+	srand((unsigned int)time(NULL));
 	int *niz = (int *)malloc(sizeof(int) * n);
 	niz[0] = rand() % 5;
 	for (int i = 1; i < n; i++)
@@ -14,8 +17,7 @@ int *generiraj(int n){
 	return niz;
 }
 void shuffle(int *niz, int n){
-	for (int i = 0; i < n; i++)
-	{
+	for (int i = 0; i < n; i++)	{
 		int k1 = rand() % n;
 		int tmp = niz[i];
 		niz[i] = niz[k1];
@@ -26,9 +28,28 @@ void print(int *niz, int n){
 	int i;
 	for (i = 0; i < n; i++)
 	{
-		printf("%d ", niz[i]);
+		printf("%d\t", niz[i]);
 	}
 	printf("\n");
+}
+void swap(int *niz, int left, int right){
+	int tmp;
+	tmp = niz[left];
+	niz[left] = niz[right];
+	niz[right] = tmp;
+}
+int median(int *niz, int n){
+	int l, r, mid;
+	l = 0;
+	r = n - 1;
+	mid = n / 2;
+	if (niz[r] < niz[l])
+		swap(niz, l, r);
+	if (niz[mid] < niz[l])
+		swap(niz, mid, l);
+	if (niz[r] < niz[mid])
+		swap(niz, r, mid);
+	return mid;
 }
 // selection sort
 void selectionsort(int *niz, int n){
@@ -66,29 +87,38 @@ int partition(int *niz, int n){
 	int l, r;
 	l = 1;
 	r = n - 1;
-	while (l < r)
-	{
-		if (niz[r] >= niz[0])
-		{
+	// if (choose_pivot==1)  {
+    //     if ((niz[0] <= niz[n/2] && niz[n/2] <= niz[n-1]) || (niz[n-1] <= niz[n/2] && niz[n/2] <= niz[0]))
+    //         pivot =  &niz[n/2];
+    //     else if ((niz[n/2] <= niz[0] && niz[0] <= niz[n-1]) || (niz[n-1] <= niz[0] && niz[0] <= niz[n/2]))
+    //         pivot =  &niz[0];
+    //     else
+    //         pivot =  &niz[n-1];
+    //     swap (niz,pivot, niz[0]);
+    // }
+	if (choose_pivot==1){
+		int tmp, med;
+		med = median(niz, n);
+		l = 0;
+		swap(niz, l, med);
+	}
+	while (l < r)	{
+		if (niz[r] >= niz[0]){
 			r--;
 		}
-		else if (niz[l] < niz[0])
-		{
+		else if (niz[l] < niz[0]){
 			l++;
 		}
-		else
-		{
+		else{
 			int tmp = niz[l];
 			niz[l] = niz[r];
 			niz[r] = tmp;
 		}
 	}
-	if (niz[0] < niz[r])
-	{ // 1
+	if (niz[0] < niz[r]){ // 1
 		return 0;
 	}
-	else
-	{ // 3
+	else{ // 3
 		int tmp = niz[r];
 		niz[r] = niz[0];
 		niz[0] = tmp;
@@ -102,26 +132,7 @@ void quicksort(int *niz, int n){
 	quicksort(niz, pi);
 	quicksort(niz + pi + 1, n - pi - 1);
 }
-int median(int *niz, int n){
-	int l, r, mid;
-	l = 0;
-	r = n - 1;
-	mid = n / 2;
-	if (niz[r] < niz[l])
-		swap(niz, l, r);
-	if (niz[mid] < niz[l])
-		swap(niz, mid, l);
-	if (niz[r] < niz[mid])
-		swap(niz, r, mid);
-	return mid;
-}
-void swap(int *niz, int left, int right){
-	int tmp;
-	tmp = niz[left];
-	niz[left] = niz[right];
-	niz[right] = tmp;
-}
-// merge sort
+// merge
 void merge(int *niz, int *niza, int na, int *nizb, int nb){
 	int a, b;
 	a = 0;
@@ -145,7 +156,6 @@ void merge(int *niz, int *niza, int na, int *nizb, int nb){
 		}
 	}
 }
-// alocira i vra�a kopiju niza
 int *duplicate(int *niz, int n){
 	int i;
 	int *novi = (int *)malloc(sizeof(int) * n);
@@ -155,10 +165,7 @@ int *duplicate(int *niz, int n){
 	}
 	return novi;
 }
-void mergesort(int *niz, int n){
-	// implementirati
-}
-// mjerenje vremena izvo�enja funkcije sortiranja
+// mjerenje vremena izvodenja funkcije sortiranja
 double measure(void (*sort)(int *niz, int n), int *niz, int n){
 	int start_time = clock();
 	sort(niz, n);
