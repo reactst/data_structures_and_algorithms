@@ -1,0 +1,6 @@
+﻿  dictionary.c
+c:\users\student\source\repos\ilario-batistic-vj-5-spa\ilario-batistic-vj-5-spa\dictionary.c(6): warning C4013: 'malloc' undefined; assuming extern returning int
+c:\users\student\source\repos\ilario-batistic-vj-5-spa\ilario-batistic-vj-5-spa\dictionary.c(36): warning C4013: 'free' undefined; assuming extern returning int
+c:\users\student\source\repos\ilario-batistic-vj-5-spa\ilario-batistic-vj-5-spa\dictionary.c(18): warning C4047: 'initializing': 'Dictionary' differs in levels of indirection from 'Dictionary *'
+c:\users\student\source\repos\ilario-batistic-vj-5-spa\ilario-batistic-vj-5-spa\dictionary.c(111): warning C4716: 'filterDictionary': must return a value
+  ilario-batistic-vj-5-spa.vcxproj -> C:\Users\Student\source\repos\ilario-batistic-vj-5-spa\Debug\ilario-batistic-vj-5-spa.exe
