@@ -7,23 +7,23 @@ void main(){
         if (niz[i]%3==0)
         brojac++;
     }
-    int brojac1=0;
     int djeljivsatri[brojac];
-    int ostatakniza=10-brojac;
+    int ostataknizaLEN=10-brojac;
     brojac=0;
-    int ostataknizaniz[ostatakniza];
+    int brojac1=0;
+    int ostatakniza[ostataknizaLEN];
     for (int i=0;i<10;i++){
         if (niz[i]%3==0){
             djeljivsatri[brojac]=niz[i];
             brojac++;
         }
         else{
-            ostataknizaniz[brojac1]=niz[i];
+            ostatakniza[brojac1]=niz[i];
             brojac1++;
         }
     }
     for (int i=0;i<brojac;i++)
     printf ("NIZ DJELJIV SA TRI: %d. %d\n",i,djeljivsatri[i]);
     for (int i=0;i<brojac1;i++)
-    printf ("OSTATAK NIZA: %d. %d\n",i,ostataknizaniz[i]);
+    printf ("OSTATAK NIZA: %d. %d\n",i,ostatakniza[i]);
 }
