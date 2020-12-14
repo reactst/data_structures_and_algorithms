@@ -35,9 +35,15 @@ void main(){
 		add(dict, buffer);
 	}
 	fclose(fd);
-	//print(dict);
-	filterDictionary(dict, filter);
-	printf ("IZA FILTERA\n");
+	// print(dict);
+	// filterDictionary(dict, filter);
+	// printf ("IZA FILTERA\n");
+	// print(dict);
+	char str[]="giugum";
+	//dodaj(dict,str);
+	prije_indeksa(dict,str);
+	brisanje_zadnjeg(dict);
 	print(dict);
+	//printf("%d \n",ukupno(dict));
 	destroy(dict);
 }

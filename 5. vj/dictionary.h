@@ -1,6 +1,5 @@
 #ifndef DICTIONARY_H
 #define DICTIONARY_H 1
-
 typedef struct Word {
 	char *word; // rijec
 	int count; // broj pojavljivanja rijeci
@@ -9,21 +8,17 @@ typedef struct Word {
 
 typedef Word* Dictionary;
 
-// kreaira novi prazni rjecnik
 Dictionary create();
-
-// dodaje rijec ili uvecava broj pojavljivanja rijeci u rjecniku
-// rijeci se dodaju u abecednom redu
 void add(Dictionary dict, char *str);
-
-// ispisuje sve rijeci i broj pojavljivanja svake rijeci
 void print(Dictionary dict);
-
-// bri�e cijeli rje�nik
 void destroy(Dictionary dict);
-
 Dictionary filterDictionary(Dictionary indict, int (*filter)(Word *w));
-
 int filter(Word *w);
-
+void dodaj (Dictionary dict, char* str);
+char* najduza(Dictionary dict);
+int ukupno(Dictionary dict);
+void prije_elementa(Dictionary dict, char* str);
+void prije_indeksa(Dictionary dict,char* str);
+void brisanje_prvog(Dictionary dict);
+void brisanje_zadnjeg(Dictionary dict);
 #endif
