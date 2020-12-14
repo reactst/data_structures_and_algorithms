@@ -1,0 +1,9 @@
+﻿  sortiranja.c
+c:\users\student\source\repos\ilario-batistic-vj4-spa\ilario-batistic-vj4-spa\sortiranja.c(26): warning C4101: 'temp': unreferenced local variable
+c:\users\student\source\repos\ilario-batistic-vj4-spa\ilario-batistic-vj4-spa\sortiranja.c(211): warning C4047: 'function': 'int *' differs in levels of indirection from 'int'
+c:\users\student\source\repos\ilario-batistic-vj4-spa\ilario-batistic-vj4-spa\sortiranja.c(211): warning C4024: 'merge': different types for formal and actual parameter 2
+c:\users\student\source\repos\ilario-batistic-vj4-spa\ilario-batistic-vj4-spa\sortiranja.c(211): warning C4047: 'function': 'int' differs in levels of indirection from 'int *'
+c:\users\student\source\repos\ilario-batistic-vj4-spa\ilario-batistic-vj4-spa\sortiranja.c(211): warning C4024: 'merge': different types for formal and actual parameter 3
+c:\users\student\source\repos\ilario-batistic-vj4-spa\ilario-batistic-vj4-spa\sortiranja.c(211): warning C4024: 'merge': different types for formal and actual parameter 4
+c:\users\student\source\repos\ilario-batistic-vj4-spa\ilario-batistic-vj4-spa\sortiranja.c(211): warning C4024: 'merge': different types for formal and actual parameter 5
+  ilario-batistic-vj4-spa.vcxproj -> C:\Users\Student\source\repos\ilario-batistic-vj4-spa\Debug\ilario-batistic-vj4-spa.exe
