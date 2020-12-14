@@ -95,12 +95,12 @@ char* najduza(Dictionary dict){
   return temp;
 }
 int ukupno(Dictionary dict){
-    int count1=0;
+    int wordsum=0;
     while(dict!=NULL){
-        count1+=dict->count;
+        wordsum+=dict->count;
         dict=dict->next;
     }
-    return count1;
+    return wordsum;
 }
 void prije_elementa(Dictionary dict, char* str){
     Dictionary novi=(Dictionary)malloc(sizeof(Word));
