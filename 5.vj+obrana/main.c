@@ -20,7 +20,6 @@ int readWord(FILE *fd, char *buffer){
 	*buffer = '\0';
 	return 1;
 }
-
 void main(){
 	FILE *fd;
 	char buffer[1024];
@@ -40,9 +39,11 @@ void main(){
 	// printf ("IZA FILTERA\n");
 	// print(dict);
 	char str[]="giugum";
+	int index=5;
 	//dodaj(dict,str);
-	prije_indeksa(dict,str);
-	brisanje_zadnjeg(dict);
+	delete_before_index(dict,str,index);
+	//brisanje_prvog(dict);
+	//brisanje_zadnjeg(dict);
 	print(dict);
 	//printf("%d \n",ukupno(dict));
 	destroy(dict);

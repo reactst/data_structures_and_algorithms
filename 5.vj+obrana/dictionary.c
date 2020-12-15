@@ -19,12 +19,12 @@ void add(Dictionary dict, char *str){
             temp->next = novi;
             return;
         }
-        else if (strcmp(temp->next->word, str) == 0)
+        else if (strcmp(temp->next->word, str)==0)
         {
             temp->next->count++;
             return;
         }
-        else if (strcmp(temp->next->word, str) > 0)
+        else if (strcmp(temp->next->word, str)>0)
         {
             novi->next = temp->next;
             temp->next = novi;
@@ -74,7 +74,7 @@ int filter(Word *w){
         return 0;
     }
 }
-void dodaj(Dictionary dict, char *str){
+void add_word(Dictionary dict, char *str){
   Dictionary n = dict->next;
   Dictionary nova = (Dictionary)malloc(sizeof(Word));
   nova->word = (char*)malloc(sizeof(char) * strlen(str) + 1); 
@@ -83,7 +83,7 @@ void dodaj(Dictionary dict, char *str){
   nova->next = dict->next;
   dict->next = nova;
 }
-char* najduza(Dictionary dict){
+char* longest_word(Dictionary dict){
     dict=dict->next;
     char* temp=dict->word;
     while(dict!=NULL){
@@ -94,7 +94,7 @@ char* najduza(Dictionary dict){
     }
   return temp;
 }
-int ukupno(Dictionary dict){
+int word_sum(Dictionary dict){
     int wordsum=0;
     while(dict!=NULL){
         wordsum+=dict->count;
@@ -102,7 +102,7 @@ int ukupno(Dictionary dict){
     }
     return wordsum;
 }
-void prije_elementa(Dictionary dict, char* str){
+void delete_before_element(Dictionary dict, char* str){
     Dictionary novi=(Dictionary)malloc(sizeof(Word));
     novi->word=(char*)malloc(sizeof(char)*strlen(str)+1);
     novi->count=1;
@@ -119,16 +119,15 @@ void prije_elementa(Dictionary dict, char* str){
     dict=dict->next;
     }
 }
-void prije_indeksa(Dictionary dict,char* str){
+void delete_before_index(Dictionary dict,char* str,int index){
     Dictionary novi=(Dictionary)malloc(sizeof(Word));
     novi->word=(char*)malloc(sizeof(char)*strlen(str)+1);
     novi->count=1;
     strcpy(novi->word,str);
     Dictionary n=dict->next;
-    Dictionary p=dict;
     int brojac=0;
     while(n!=NULL){
-        if(brojac==5){
+        if(brojac==index){
             novi->next=n;
             dict->next=novi;
         }
@@ -137,23 +136,31 @@ void prije_indeksa(Dictionary dict,char* str){
     dict=dict->next;
     }
 }
-void brisanje_prvog(Dictionary dict){
+void delete_first(Dictionary dict){
     Dictionary temp=dict->next;
     Dictionary n=dict->next->next;
     dict->next=n;
     free(temp->word);
     free(temp);
 }
-void brisanje_zadnjeg(Dictionary dict){
-    Dictionary n=dict->next->next;
-    Dictionary p=dict;
-    while(n!=NULL){
-        p=p->next;
-        n=n->next;
+void delete_last(Dictionary dict){
+    Dictionary n=dict->next;
+do{
+    n=dict;
+    dict=dict->next;
+    if(dict->next==NULL){
+        n->next=NULL;
+        free(dict->next);
+        }
     }
-    free(p->word);
-    free(p);
-    free(n->word);
-    free(n);
-    p->next=NULL;
+    while(n->next!=NULL);
+};
+void delete_word (Dictionary dict, char* str){
+    Dictionary temp=dict->next;
+    while (temp!=NULL){
+        dict=dict->next;
+        if (temp->word==str){
+
+        }
+    }
 }
