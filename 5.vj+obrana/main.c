@@ -38,12 +38,16 @@ void main(){
 	// filterDictionary(dict, filter);
 	// printf ("IZA FILTERA\n");
 	// print(dict);
-	char str[]="giugum";
+	char str[]="wrong";
 	int index=5;
 	//dodaj(dict,str);
-	delete_before_index(dict,str,index);
+	insert(dict,str,index);
 	//brisanje_prvog(dict);
 	//brisanje_zadnjeg(dict);
+	//brisi_zadnji(dict);
+	//okreni_listu(dict);
+	obrisi_vise_od_10(dict);
+	//swap_first_last(dict);
 	print(dict);
 	//printf("%d \n",ukupno(dict));
 	destroy(dict);

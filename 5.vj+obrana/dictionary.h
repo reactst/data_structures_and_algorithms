@@ -18,7 +18,8 @@ void add_word (Dictionary dict, char* str);
 char* longest_word(Dictionary dict);
 int word_sum(Dictionary dict);
 void delete_before_element(Dictionary dict, char* str);
-void delete_before_index(Dictionary dict,char* str,int index);
+void insert(Dictionary dict,char* str,int index);
 void delete_first(Dictionary dict);
 void delete_last(Dictionary dict);
+void delete_word (Dictionary dict, char* str);
 #endif
