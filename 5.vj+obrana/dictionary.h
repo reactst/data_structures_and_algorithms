@@ -22,4 +22,6 @@ void insert(Dictionary dict,char* str,int index);
 void delete_first(Dictionary dict);
 void delete_last(Dictionary dict);
 void delete_word (Dictionary dict, char* str);
+void delete_last_10(Dictionary dict);
+void delete_with_more_than10(Dictionary dict);
 #endif
