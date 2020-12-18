@@ -48,7 +48,7 @@ void main(){
 	//reverse_list(dict);
 	//delete_with_more_than10(dict);
 	//swap_first_last(dict);
-	add_second_third (dict,str1,str2);
+	//add_second_third (dict,str1,str2);
 	print(dict);
 	//printf("%d \n",ukupno(dict));
 	destroy(dict);
