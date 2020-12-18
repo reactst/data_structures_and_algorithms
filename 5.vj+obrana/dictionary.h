@@ -26,4 +26,5 @@ void delete_last_10(Dictionary dict);
 void delete_with_more_than10(Dictionary dict);
 void swap_first_last(Dictionary dict);
 void add_second_third (Dictionary dict,char *str1,char *str2);
+void longestword_firstplace (Dictionary dict);
 #endif

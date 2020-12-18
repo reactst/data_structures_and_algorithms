@@ -49,6 +49,7 @@ void main(){
 	//delete_with_more_than10(dict);
 	//swap_first_last(dict);
 	//add_second_third (dict,str1,str2);
+	longestword_firstplace(dict);
 	print(dict);
 	//printf("%d \n",ukupno(dict));
 	destroy(dict);

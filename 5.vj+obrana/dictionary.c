@@ -257,3 +257,18 @@ void add_second_third (Dictionary dict, char* str1, char* str2){
     dicstr1->next=dicstr2;
     dicstr2->next=drugi;     
 }
+void longestword_firstplace (Dictionary dict){
+    Dictionary dummy=dict;
+    Dictionary prvi=dict->next;
+    dict = dict->next;
+    char *temp = dict->word;
+    while (dict != NULL){
+        if (strlen(dict->word) > strlen(temp)){
+            temp = dict->word;
+            dict->next=dict->next->next;
+        }
+        dict = dict->next;
+    }
+    dummy->next->word=temp;
+    
+}
