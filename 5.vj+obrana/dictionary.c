@@ -244,3 +244,16 @@ void swap_first_last(Dictionary dict){
     prijewalkera->next = prvi;
     prvi->next = NULL;
 }
+void add_second_third (Dictionary dict, char* str1, char* str2){
+    Dictionary dicstr1=(Dictionary)malloc(sizeof(Word));
+    Dictionary dicstr2=(Dictionary)malloc(sizeof(Word));
+    dict=dict->next;
+    Dictionary drugi=dict->next;
+    dicstr1->word=str1;
+    dicstr1->count=1;
+    dicstr2->word=str2;
+    dicstr2->count=1;
+    dict->next=dicstr1;
+    dicstr1->next=dicstr2;
+    dicstr2->next=drugi;     
+}
