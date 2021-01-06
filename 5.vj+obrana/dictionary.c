@@ -270,5 +270,4 @@ void longestword_firstplace (Dictionary dict){
         dict = dict->next;
     }
     dummy->next->word=temp;
-    
 }
