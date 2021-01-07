@@ -262,14 +262,17 @@ void longestword_firstplace (Dictionary dict){
     Dictionary prvi=dict->next;
     Dictionary prijedict=dict;
     dict = dict->next;
+    Dictionary spremijosjedan=dict->next;
     Dictionary temp = dict;
     while (dict != NULL){
         if (strlen(dict->word) > strlen(temp->word)){
             temp->word = dict->word;
-            prijedict->next=dict->next->next;
+            prijedict->next=prijedict->next;
         }
         prijedict=prijedict->next;
         dict = dict->next;
     }
     dummy->next=temp;
+    temp->next=prvi;
+    prvi->next=spremijosjedan;
 }
