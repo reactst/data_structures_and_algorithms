@@ -38,8 +38,7 @@ void main(){
 	// filterDictionary(dict, filter);
 	// printf ("IZA FILTERA\n");
 	// print(dict);
-	char str1[]="jebenti";
-	char str2[]="boga";
+	
 	int index=5;
 	//dodaj(dict,str);
 	//insert(dict,str,index);
@@ -49,7 +48,9 @@ void main(){
 	//delete_with_more_than10(dict);
 	//swap_first_last(dict);
 	//add_second_third (dict,str1,str2);
-	longestword_firstplace(dict);
+	//longestword_firstplace(dict);
+	print(dict);
+	put_first_in_last(dict);
 	print(dict);
 	//printf("%d \n",ukupno(dict));
 	destroy(dict);
