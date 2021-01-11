@@ -40,6 +40,8 @@ void main(){
 	// print(dict);
 	
 	int index=5;
+	char str1[]="fak";
+	char str2[]="zhis bish";
 	//dodaj(dict,str);
 	//insert(dict,str,index);
 	//delete_first(dict);
