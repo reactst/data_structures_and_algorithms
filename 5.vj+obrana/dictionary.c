@@ -268,6 +268,7 @@ void longestword_firstplace (Dictionary dict){
     while (dict->next != NULL){
         if (strlen(dict->word) > strlen(temp->word)){
             temp->word = dict->word;
+            //prijedict->next=prijedict->next;
         }
         dict = dict->next;
         pomocni=pomocni->next;
