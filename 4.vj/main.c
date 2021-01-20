@@ -1,5 +1,5 @@
 #include "sortiranja.h"
-#include "sortiranja.c" //JEREHAKER
+#include "sortiranja.c"
 
 void main (){
     srand(time(NULL));
@@ -73,3 +73,4 @@ void main (){
         free (niz);
     }
 }
+//GOTOVO

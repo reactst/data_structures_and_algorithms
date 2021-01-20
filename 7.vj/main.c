@@ -79,3 +79,4 @@ void main()
 	printf("\nH = %d\n", BSTHeight(bst));
 	DeleteBSTree(bst);
 }
+//GOTOVO

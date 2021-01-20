@@ -96,3 +96,4 @@ void main (){
     printf ("mystrstr: %s\n",mystrstr(test,testReverse));               
     // printf ("reverse string ježž %s\n", reverse(string,testReverse));         //MIJENJA testReverse
 }
+//GOTOVO

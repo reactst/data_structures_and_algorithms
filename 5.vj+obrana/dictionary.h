@@ -29,3 +29,4 @@ void add_second_third (Dictionary dict,char *str1,char *str2);
 void longestword_firstplace (Dictionary dict);
 void put_first_in_last (Dictionary dict);
 #endif
+//GOTOVO

@@ -12,3 +12,6 @@ Dodatno:
 Implementirati merge i mergesort funkcije. Pomoćne nizove možete alocirati/oslobađati po potrebi. Izmjeriti vrijeme izvođenja implementirane funkcije za slučajni i sortirani niz dužine n = [1000 .. 10000] (prilagoditi po potrebi kao i prije).
 
 Prilikom testiranja se može dogoditi prevelik broj rekurzija (quicksort na već sortiranom nizu bez biranja pivota) pa je potrebno povećati stack size u postavkama projekta: Properites / Linker / System / Stack Reserve Size postaviti na 16000000.
+
+
+GOTOVO

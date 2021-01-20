@@ -203,3 +203,4 @@ void main(){
 	}
 	printf("\nkraj!\n");
 }
+//GOTOVO

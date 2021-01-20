@@ -186,3 +186,4 @@ double measure(void (*sort)(int *niz, int n), int *niz, int n){
 	int end_time = clock();
 	return (double)(end_time - start_time) / CLOCKS_PER_SEC;
 }
+//GOTOVO

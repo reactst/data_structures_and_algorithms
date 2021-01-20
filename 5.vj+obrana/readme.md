@@ -48,3 +48,6 @@ Obrana će se sastojati od zadatka koji je vezan uz vježbu sa vezanim listama g
     • Kopiranje jednog ili više elemenata u niz
     • Dodavanje elemenata iz niza u listu
     • Druge moguće kombinacije operacija u okviru navedenog.
+
+
+GOTOVO

@@ -170,3 +170,4 @@ void main (){
     free(tp);
     free(pozitivci);
 }
+//GOTOVO

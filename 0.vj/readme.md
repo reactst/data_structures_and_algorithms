@@ -11,3 +11,5 @@ Napisati i testirati iduće funkcije koje repliciraju funkcije iz biblioteke str
     • mystrstr() – funkcija vraća pokazivač (unutar prvog stringa) koji pokazuje na prvo pojavljivanje drugog stringa. Ako ga ne pronađe, funkcija vraća NULL.
     • reverse() – prima dva stringa i kopira prvi string u drugi string naopako (funkcija ne postoji u string.h)
 Detaljnije opise funkcija možete naći u opisu string.h biblioteke (npr. http://www.cplusplus.com/reference/cstring/). Napisati testove za funkcije koji će ispisivati rezultat „my“ verzije funkcije i originalne verzije funkcije.
+
+GOTOVO

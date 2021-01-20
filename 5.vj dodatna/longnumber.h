@@ -52,4 +52,5 @@ LongNumber mul_by_pow10(LongNumber num, int pow);
 LongNumber mul_longnum(LongNumber a, LongNumber b);
 
 #endif
+//GOTOVO
 

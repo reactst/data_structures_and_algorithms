@@ -11,4 +11,4 @@ Implementirati funkcije u kôdu za binarno stablo pretrage (opis u kôdu). Biti 
     • Preorder (prvo trenutni čvor pa zatim djeca) -  za snimanje stabla istim redoslijedom kao što su čvorovi dodani u stablo.
     • Inorder (prvo lijevo dijete, pa trenutni čvor, i desno dijete) – za ispis riječi po abecednom redoslijedu.
 
-
+//GOTOVO

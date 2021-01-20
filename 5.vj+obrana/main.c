@@ -57,3 +57,4 @@ void main(){
 	//printf("%d \n",ukupno(dict));
 	destroy(dict);
 }
+//GOTOVO

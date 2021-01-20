@@ -22,3 +22,4 @@ void main() {
 	delete_longnum(nume);
 	delete_longnum(numf);
 }
+//GOTOVO

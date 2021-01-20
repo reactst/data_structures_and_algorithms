@@ -20,3 +20,6 @@ Potrebno je izmjeriti vremena za različite dužine niza (da bi se promatrao ras
 Za dužinu (alociranje) niza koji će sadržati presjek nizova se može uzeti veća dužina od dva primljena niza. Ispisati vrijeme izvođenja za sve kombinacije dužina (ukupno ih ima 16). 
 Procijeniti vremensku složenost O(f(NA, NB)) za svaki algoritam analitički i provjeriti da li odgovaraju vremenima izvođenja.
 Za mjerenje izvođenja pojedinog algoritma koristiti funkciju clock(), po potrebi uvećati sve duljine nizova pet do deset puta (da bi se dobila različita vremena u ovisnosti o duljini niza).
+
+
+GOTOVO

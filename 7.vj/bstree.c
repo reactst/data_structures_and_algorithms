@@ -70,3 +70,4 @@ BSTree LoadBSTree(FILE *fd){
 	}
 	return bst;
 }
+//GOTOVO

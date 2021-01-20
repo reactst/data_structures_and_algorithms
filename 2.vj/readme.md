@@ -49,3 +49,6 @@ Dodatne vježbe za strukture i datoteke
     3) Napisati program koji od korisnika čita n struktura u niz i zatim ih sprema u binarnu datoteku. Prije samog niza se sprema broj n. Broj n se isto čita od korisnika prije čitanja struktura. Strukture su tipa Koordinata i sastoje se od dva float broja.
     4) Napisati program koji od korisnika čita jedan broj odnosno indeks. Program iz datoteke iz prethodnog zadatka čita i ispisuje na ekran koordinatu koja odgovara tom indeksu. (koristite fseek)
     5) Napisati program koji od korisnika čita dvije koordinate. Program u datoteku (iz zadatka 3) dodaje još jednu točku na kraj datoteke. Program zatim čita i ispisuje sve koordinate unazad. (otvorite datoteku za čitanje i pisanje)
+
+    
+    GOTOVO

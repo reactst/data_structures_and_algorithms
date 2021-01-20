@@ -2,13 +2,13 @@
 #define TREE_H
 #include <string.h>
 
-// Èvor stabla sa pokazivaèom na rijeè i na djecu èvora
+// ï¿½vor stabla sa pokazivaï¿½om na rijeï¿½ i na djecu ï¿½vora
 typedef struct Node {
 	char *word;
 	struct Node *left, *right;
 } Node;
 
-// Stablo odnosno pokazivaè na korijen stabla
+// Stablo odnosno pokazivaï¿½ na korijen stabla
 typedef Node* BSTree;
 
 BSTree NewBSTree();
@@ -26,3 +26,4 @@ void DeleteBSTree(BSTree bst);
 BSTree LoadBSTree(FILE *fd);
 
 #endif
+//GOTOVO

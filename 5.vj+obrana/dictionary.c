@@ -288,3 +288,4 @@ void put_first_in_last (Dictionary dict){
     dummy->next=dummy->next->next;
     prvi->next=NULL;
 }
+//GOTOVO

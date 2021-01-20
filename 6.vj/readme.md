@@ -25,3 +25,6 @@ Implementirati heap-sort:
         b. Smanjiti veličinu hrpe za jedan
         c. Popraviti hrpu od vrha
         d. Ponavljati dok se veličina hrpe ne smanji na 0
+
+
+GOTOVO

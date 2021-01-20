@@ -107,4 +107,5 @@ void main (){
     object3d_to_txt (main_objekt);
     deleter (main_objekt);
 }
+//GOTOVO
 
