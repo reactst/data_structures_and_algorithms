@@ -55,7 +55,7 @@ void DeleteBSTree(BSTree bst){
 	return;
 	DeleteBSTree(bst->left);
 	DeleteBSTree(bst->right);
-	printf("\n Brise se čvor: %s\n", bst->word);
+	//printf("\n Brise se čvor: %s\n", bst->word);
 	free(bst->word);
 	free(bst);
 }
@@ -65,7 +65,7 @@ BSTree LoadBSTree(FILE *fd){
 	bst = NewBSTree();
 	char buffer[1024];
 	while(readWord(fd, buffer)){
-		printf("%s\n", buffer);
+		//printf("%s\n", buffer);
 		AddNode(&bst, strdup(buffer));
 	}
 	return bst;
