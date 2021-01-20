@@ -11,7 +11,7 @@ typedef struct {
     element *array;
 }queue;
 
-int unaprijedzadanaduzina = 10000;
+int unaprijedzadanaduzina = 10;
 
 void print_queue (queue *q){
     for (int i=0;i<unaprijedzadanaduzina;i++) {
@@ -74,6 +74,12 @@ void main (){
     print_queue(q);
     printf ("\tposli uklanjanja s vrha\n");
     remove_from_top(q);
+    print_queue(q);
+    remove_from_top(q);
+    printf ("\n");
+    print_queue(q);
+    remove_from_top(q);
+    printf ("\n");
     print_queue(q);
     free (q->array);
     free (q);
