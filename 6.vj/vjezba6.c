@@ -5,13 +5,13 @@
 typedef struct {
     void* ignore;
     int priority;
-} element;
+}element;
 
 typedef struct {
     element *array;
 }queue;
 
-int unaprijedzadanaduzina=10000;
+int unaprijedzadanaduzina = 10000;
 
 void print_queue (queue *q){
     for (int i=0;i<unaprijedzadanaduzina;i++) {
