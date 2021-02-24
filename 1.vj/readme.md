@@ -1,5 +1,4 @@
-1. Laboratorijska vježba
-
+**1. Laboratorijska vježba**
 Nizovi, strukture i alociranje
 
 Napisati iduće funkcije koje rade sa nizom brojeva:
