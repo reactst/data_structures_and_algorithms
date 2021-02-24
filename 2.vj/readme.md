@@ -1,4 +1,4 @@
-2. Laboratorijska vježba
+**2. Laboratorijska vježba**
 
 Datoteke i strukture
 
@@ -7,9 +7,9 @@ Napisati funkcije za rad sa datotekama u STL formatu (format za opis 3D objekata
 
 
 Za tekstualni format:
-    
-			• Zaglavlje je jedna linija teksta „solid ime„ gdje je ime proizvoljno i može biti prazno
-   		 • Svaki trokut je opisan sa idućim linijama gdje su n i v realni brojevi:
+
+	• Zaglavlje je jedna linija teksta „solid ime„ gdje je ime proizvoljno i može biti prazno
+	• Svaki trokut je opisan sa idućim linijama gdje su n i v realni brojevi:
 		
         facet normal ni nj nk
             outer loop
@@ -31,7 +31,7 @@ Prilikom čitanja/pisanja pripazite da će zapis u binarnoj datoteci zauzimati 5
 
 Potrebno je definirati strukturu Trokut koja će predstavljati jedan trokut sa normalom i sa dodatnim unsigned short brojem (boja trokuta), ukupno 50 byte-ova. Definirati dodatnu strukturu Objekt3D koja će sadržati niz trokuta i njihov broj. Možete definirati i iskoristiti dodatnu strukturu Vrh za koordinate vrhova trokuta. Potrebno je napisati i testirati funkcije:
    	
-		1) Funkciju koja čita binarnu STL datoteku i vraća ispunjenu Objekt3D  strukturu
+	1) Funkciju koja čita binarnu STL datoteku i vraća ispunjenu Objekt3D  strukturu
    	2) Funkciju koja Objekt3D strukturu zapisuje u binarnu STL datoteku
    	3) Funkcija koja Objekt3D strukturu zapisuje u tekstualnu STL datoteku
    	4) Funkciju koja briše Objekt3D strukturu
@@ -51,4 +51,4 @@ Dodatne vježbe za strukture i datoteke
     5) Napisati program koji od korisnika čita dvije koordinate. Program u datoteku (iz zadatka 3) dodaje još jednu točku na kraj datoteke. Program zatim čita i ispisuje sve koordinate unazad. (otvorite datoteku za čitanje i pisanje)
 
     
-    GOTOVO
+ GOTOVO
