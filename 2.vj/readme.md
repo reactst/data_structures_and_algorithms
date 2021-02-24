@@ -1,5 +1,4 @@
 **2. Laboratorijska vježba**
-
 Datoteke i strukture
 
 
