@@ -1,8 +1,8 @@
-Strukture podataka i algoritmi
+# Strukture podataka i algoritmi
 
-OSS Split
+**OSS Split**
 
-Toma Rončević
+_Toma Rončević_
 
 Godina 2020./2021.
 
