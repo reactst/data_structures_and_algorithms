@@ -1,5 +1,6 @@
 **2. Laboratorijska vježba**
-Datoteke i strukture
+
+# Datoteke i strukture
 
 
 Napisati funkcije za rad sa datotekama u STL formatu (format za opis 3D objekata). Osnovni STL format je sastavljen od zaglavlja i niza trokuta (od kojih je sastavljena površina 3D objekta). STL format može biti tekstualan ili binaran. 

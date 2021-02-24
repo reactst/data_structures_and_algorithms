@@ -1,5 +1,6 @@
 **6. Laboratorijska vježba**
-Prioritetni red
+
+# Prioritetni red
 
 Implementacija sa gomilom
 

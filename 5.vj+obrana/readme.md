@@ -1,5 +1,6 @@
 **5. Laboratorijska vježba**
-Vezane liste 
+
+# Vezane liste 
 
 Unutar dictionary.c je potrebno implementirati funkcije opisane u dictionary.h datoteci. Kôd je na stranicama kolegija.
 

@@ -1,5 +1,6 @@
 **0. Laboratorijska vježba**
-C ponavljanje
+
+# C ponavljanje
 
 Napisati i testirati iduće funkcije koje repliciraju funkcije iz biblioteke string.h:
 

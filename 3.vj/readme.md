@@ -1,6 +1,6 @@
 **3. Laboratorijska vježba**
 
-Mjerenje vremena izvođenja algoritma (a posteriori)
+# Mjerenje vremena izvođenja algoritma (a posteriori)
 
 Napisati iduće funkcije:
 

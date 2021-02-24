@@ -1,5 +1,6 @@
 **3. Laboratorijska vježba**
-Algoritmi sortiranja 
+
+# Algoritmi sortiranja 
 
 U datoteci sortiranja.c se nalaze različite implementacije algoritma za sortiranje (insertion, selection i quick sortiranje). 
 Uz to ima i nekoliko pomoćnih funkcija (za generiranje niza, mjerenje izvođenja funkcije sortiranja i neke pomoćne funkcije). 
