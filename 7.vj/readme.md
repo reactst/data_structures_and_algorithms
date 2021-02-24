@@ -1,6 +1,4 @@
-7. Laboratorijska vježba
-
-
+**7. Laboratorijska vježba**
 Binarna stabla
 
 Implementacija rječnika sa binarnim stablom pretrage
