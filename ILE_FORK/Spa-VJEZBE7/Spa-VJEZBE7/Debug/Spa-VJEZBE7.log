@@ -1,5 +1,0 @@
-﻿  bstree.c
-C:\Users\Ilario\source\repos\Spa-VJEZBE7\Spa-VJEZBE7\bstree.c(85,17): warning C4013: 'readWord' undefined; assuming extern returning int
-  main.c
-  Generating Code...
-  Spa-VJEZBE7.vcxproj -> C:\Users\Ilario\source\repos\Spa-VJEZBE7\Debug\Spa-VJEZBE7.exe

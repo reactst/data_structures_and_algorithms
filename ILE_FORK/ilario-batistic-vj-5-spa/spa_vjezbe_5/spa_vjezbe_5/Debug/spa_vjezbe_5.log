@@ -1,6 +1,0 @@
-﻿  dictionary.c
-C:\Users\Ilario\source\repos\spa_vjezbe_5\spa_vjezbe_5\dictionary.c(6,39): warning C4013: 'malloc' undefined; assuming extern returning int
-C:\Users\Ilario\source\repos\spa_vjezbe_5\spa_vjezbe_5\dictionary.c(37,17): warning C4013: 'free' undefined; assuming extern returning int
-C:\Users\Ilario\source\repos\spa_vjezbe_5\spa_vjezbe_5\dictionary.c(18,1): warning C4047: 'initializing': 'Dictionary' differs in levels of indirection from 'Dictionary *'
-C:\Users\Ilario\source\repos\spa_vjezbe_5\spa_vjezbe_5\dictionary.c(111): warning C4716: 'filterDictionary': must return a value
-  spa_vjezbe_5.vcxproj -> C:\Users\Ilario\source\repos\spa_vjezbe_5\Debug\spa_vjezbe_5.exe
